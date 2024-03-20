@@ -32,7 +32,7 @@ public class MangaDexAPIService {
                 .bodyToMono(JsonNode.class)
                 .block();
 
-        if(!responseManga.isEmpty()) {
+        if(responseManga != null) {
             for(JsonNode manga: responseManga.findValue("data")) {
                 if(manga.findValue("title").findValue("en").toPrettyString().substring(1, manga.findValue("title").findValue("en").toPrettyString().length() - 1).equals(titleName))
                     if (manga.findValue("id") != null)

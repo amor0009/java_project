@@ -15,8 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 public class MangaDexAPIService {
     private final WebClient webClient;
-    private final String TITLE= "title";
-    private final String ATTRIBUTES = "attributes";
+    private final static String TITLE1= "title";
+    private final static String ATTRIBUTES1 = "attributes";
     MangaDexAPIService() {
         this.webClient = WebClient
                 .builder()
@@ -27,7 +27,7 @@ public class MangaDexAPIService {
         JsonNode responseManga =  webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/manga")
-                        .queryParam(TITLE, titleName)
+                        .queryParam(TITLE1, titleName)
                         .build()
                 )
                 .retrieve()
@@ -36,7 +36,7 @@ public class MangaDexAPIService {
 
         if(responseManga != null) {
             for(JsonNode manga: responseManga.findValue("data")) {
-                if(manga.findValue(TITLE).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE).findValue("en").toPrettyString().length() - 1).equals(titleName))
+                if(manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName))
                     if (manga.findValue("id") != null)
                         return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
             }
@@ -64,8 +64,8 @@ public class MangaDexAPIService {
                         .substring(1, element.findValue("id").toPrettyString().length() - 1));
                 genre.setType(element.findValue("group").toPrettyString()
                         .substring(1, element.findValue("group").toPrettyString().length() - 1));
-                genre.setName(element.findValue(ATTRIBUTES).findValue("name").findValue("en").toPrettyString()
-                        .substring(1, element.findValue(ATTRIBUTES).findValue("name").findValue("en").toPrettyString().length() - 1));
+                genre.setName(element.findValue(ATTRIBUTES1).findValue("name").findValue("en").toPrettyString()
+                        .substring(1, element.findValue(ATTRIBUTES1).findValue("name").findValue("en").toPrettyString().length() - 1));
                 genres.add(genre);
             }
         }
@@ -83,8 +83,8 @@ public class MangaDexAPIService {
                 .block();
 
         Author author = new Author();
-        author.setName(authorResponse.findValue(ATTRIBUTES).findValue("name").toPrettyString()
-                .substring(1,authorResponse.findValue(ATTRIBUTES).findValue("name").toPrettyString().length() - 1));
+        author.setName(authorResponse.findValue(ATTRIBUTES1).findValue("name").toPrettyString()
+                .substring(1,authorResponse.findValue(ATTRIBUTES1).findValue("name").toPrettyString().length() - 1));
         author.setType(authorResponse.findValue("type").toPrettyString()
                 .substring(1, authorResponse.findValue("type").toPrettyString().length() - 1));
         author.setId(authorId);
@@ -106,8 +106,8 @@ public class MangaDexAPIService {
         List<Genre> genres = getGenresInfo(mangaResponse);
 
         Manga manga = new Manga();
-        manga.setTitle(mangaResponse.findValue(TITLE).findValue("en").toPrettyString()
-                .substring(1, mangaResponse.findValue(TITLE).findValue("en").toPrettyString().length() -1));
+        manga.setTitle(mangaResponse.findValue(TITLE1).findValue("en").toPrettyString()
+                .substring(1, mangaResponse.findValue(TITLE1).findValue("en").toPrettyString().length() -1));
         manga.setId(mangaResponse.findValue("id").toPrettyString()
                 .substring(1, mangaResponse.findValue("id").toPrettyString().length() - 1));
         manga.setType(mangaResponse.findValue("type").toPrettyString()

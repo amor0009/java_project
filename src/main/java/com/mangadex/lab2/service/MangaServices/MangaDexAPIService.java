@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Service
 @AllArgsConstructor
@@ -33,12 +32,14 @@ public class MangaDexAPIService {
                 .bodyToMono(JsonNode.class)
                 .block();
 
-        for(JsonNode manga: responseManga.findValue("data")) {
-            if(manga.findValue("title").findValue("en").toPrettyString().substring(1, manga.findValue("title").findValue("en").toPrettyString().length() - 1).equals(titleName))
-                if (manga.findValue("id") != null)
-                    return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
-                else
-                    return null;
+        if(!responseManga.isEmpty()) {
+            for(JsonNode manga: responseManga.findValue("data")) {
+                if(manga.findValue("title").findValue("en").toPrettyString().substring(1, manga.findValue("title").findValue("en").toPrettyString().length() - 1).equals(titleName))
+                    if (manga.findValue("id") != null)
+                        return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
+                    else
+                        return null;
+        }
         }
         return null;
     }

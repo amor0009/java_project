@@ -24,7 +24,7 @@ public class AuthorController {
     public Author addAuthor(@RequestBody Author author) {
         return authorService.addAuthor(author);
     }
-    @PatchMapping("")
+    @PutMapping("")
     public Author updateAuthor(@RequestBody Author author) {
         return authorService.updateAuthor(author);
     }

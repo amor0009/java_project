@@ -14,34 +14,34 @@ public class GenreController {
     private GenreMangaDexService genreMangaDexService;
     private GenreService genreService;
 
-    @GetMapping(value = "")
+    @GetMapping(value = "list")
     public List<Genre> getAllGenres() {
         return genreService.getAllGenres();
     }
-    @GetMapping(value = "/update")
+    @GetMapping(value = "update")
     public List<Genre> updateGenres() {
         List<Genre> genres = genreMangaDexService.getAllGenres();
         return genreService.saveAllGenres(genres);
     }
-    @GetMapping(value = "/{genreId}")
+    @GetMapping(value = "find/{genreId}")
     public Genre getGenreById(@PathVariable String genreId){
         return genreService.findGenreById(genreId);
     }
-    @PostMapping(value = "")
+    @PostMapping(value = "save")
     public Genre addGenre(@RequestBody Genre genre) {
         if(genre == null)
             return null;
         else
             return genreService.saveGenre(genre);
     }
-    @PutMapping(value = "")
+    @PutMapping(value = "update")
     public Genre updateGenre(@RequestBody Genre genre) {
         if(genre == null)
             return null;
         else
             return genreService.updateGenre(genre);
     }
-    @DeleteMapping(value = "/{genreId}", produces = "application/json")
+    @DeleteMapping(value = "delete/{genreId}", produces = "application/json")
     public String deleteGenre(@PathVariable String genreId) {
         Genre genre = genreService.findGenreById(genreId);
         if(genre == null)

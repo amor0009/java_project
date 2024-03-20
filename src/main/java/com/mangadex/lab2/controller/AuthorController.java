@@ -12,23 +12,23 @@ import java.util.List;
 public class AuthorController {
     private AuthorService authorService;
 
-    @GetMapping(value = "")
+    @GetMapping(value = "list")
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
     }
-    @GetMapping(value = "/{authorId}", produces = "application/json")
+    @GetMapping(value = "find/{authorId}", produces = "application/json")
     public Author getAuthorById(@PathVariable String authorId) {
         return authorService.getAuthorById(authorId);
     }
-    @PostMapping("")
+    @PostMapping("save")
     public Author addAuthor(@RequestBody Author author) {
         return authorService.addAuthor(author);
     }
-    @PutMapping("")
+    @PutMapping("update")
     public Author updateAuthor(@RequestBody Author author) {
         return authorService.updateAuthor(author);
     }
-    @DeleteMapping("/{authorId}")
+    @DeleteMapping("delete/{authorId}")
     public void deleteAuthor(@PathVariable String authorId) {
         authorService.deleteAuthorById(authorId);
     }

@@ -20,7 +20,7 @@ public class MangaController {
         Manga manga =  mangaDexAPIService.getMangaInfo(mangaID);
         mangaService.saveManga(manga);
     }
-    @GetMapping("watch_manga_list")
+    @GetMapping("list")
     public List<Manga> getMangas() {
         return mangaService.getMangas();
     }
@@ -28,15 +28,15 @@ public class MangaController {
     public Manga getMangaByID(@PathVariable String id) {
         return mangaService.findByID(id);
     }
-    @PostMapping("save_manga")
+    @PostMapping("save")
     public void saveManga(@RequestBody Manga manga) {
         mangaService.saveManga(manga);
     }
-    @PutMapping("update_manga")
+    @PutMapping("update")
     public void updateManga(@RequestBody Manga manga) {
         mangaService.updateManga(manga);
     }
-    @DeleteMapping("delete_manga/{id}")
+    @DeleteMapping("delete/{id}")
     public void deleteManga(@PathVariable String id) {
         mangaService.deleteManga(id);
     }

@@ -1,8 +1,8 @@
 package com.mangadex.lab2.controller;
 
 import com.mangadex.lab2.model.Manga;
-import com.mangadex.lab2.service.MangaServices.MangaDexAPIService;
-import com.mangadex.lab2.service.MangaServices.MangaService;
+import com.mangadex.lab2.service.manga.MangaDexAPIService;
+import com.mangadex.lab2.service.manga.MangaService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

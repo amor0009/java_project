@@ -1,8 +1,8 @@
-package com.mangadex.lab2.service.AuthorServices.ImplAuthorServices;
+package com.mangadex.lab2.service.author.impl;
 
 import com.mangadex.lab2.model.Author;
 import com.mangadex.lab2.repository.AuthorRepository;
-import com.mangadex.lab2.service.AuthorServices.AuthorService;
+import com.mangadex.lab2.service.author.AuthorService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;

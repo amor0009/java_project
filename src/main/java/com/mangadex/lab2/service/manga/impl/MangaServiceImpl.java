@@ -1,8 +1,8 @@
-package com.mangadex.lab2.service.MangaServices.ImplMangaServices;
+package com.mangadex.lab2.service.manga.impl;
 
 import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.repository.MangaRepository;
-import com.mangadex.lab2.service.MangaServices.MangaService;
+import com.mangadex.lab2.service.manga.MangaService;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

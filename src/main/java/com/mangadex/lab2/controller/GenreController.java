@@ -1,8 +1,8 @@
 package com.mangadex.lab2.controller;
 
 import com.mangadex.lab2.model.Genre;
-import com.mangadex.lab2.service.GenreServices.GenreMangaDexService;
-import com.mangadex.lab2.service.GenreServices.GenreService;
+import com.mangadex.lab2.service.genre.GenreMangaDexService;
+import com.mangadex.lab2.service.genre.GenreService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -16,8 +16,7 @@ public class GenreController {
 
     @GetMapping(value = "")
     public List<Genre> getAllGenres() {
-        List<Genre> genres = genreService.getAllGenres();
-        return genres;
+        return genreService.getAllGenres();
     }
     @GetMapping(value = "/update")
     public List<Genre> updateGenres() {
@@ -26,22 +25,21 @@ public class GenreController {
     }
     @GetMapping(value = "/{genreId}")
     public Genre getGenreById(@PathVariable String genreId){
-        Genre genre = genreService.findGenreById(genreId);
-        return genre;
+        return genreService.findGenreById(genreId);
     }
     @PostMapping(value = "")
     public Genre addGenre(@RequestBody Genre genre) {
         if(genre == null)
             return null;
-        Genre newGenre = genreService.saveGenre(genre);
-        return newGenre;
+        else
+            return genreService.saveGenre(genre);
     }
     @PutMapping(value = "")
     public Genre updateGenre(@RequestBody Genre genre) {
         if(genre == null)
             return null;
-        Genre newGenre = genreService.updateGenre(genre);
-        return newGenre;
+        else
+            return genreService.updateGenre(genre);
     }
     @DeleteMapping(value = "/{genreId}", produces = "application/json")
     public String deleteGenre(@PathVariable String genreId) {

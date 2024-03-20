@@ -4,9 +4,7 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.List;
-import java.util.Set;
 
 @Data
 @Entity

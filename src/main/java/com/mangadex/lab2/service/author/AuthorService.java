@@ -1,4 +1,4 @@
-package com.mangadex.lab2.service.AuthorServices;
+package com.mangadex.lab2.service.author;
 
 import com.mangadex.lab2.model.Author;
 import java.util.List;

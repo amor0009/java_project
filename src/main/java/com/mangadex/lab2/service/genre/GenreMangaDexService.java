@@ -1,4 +1,4 @@
-package com.mangadex.lab2.service.GenreServices;
+package com.mangadex.lab2.service.genre;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.mangadex.lab2.model.Genre;

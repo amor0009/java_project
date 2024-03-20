@@ -1,8 +1,8 @@
-package com.mangadex.lab2.service.GenreServices.ImplGenreServices;
+package com.mangadex.lab2.service.genre.impl;
 
 import com.mangadex.lab2.model.Genre;
 import com.mangadex.lab2.repository.GenreRepository;
-import com.mangadex.lab2.service.GenreServices.GenreService;
+import com.mangadex.lab2.service.genre.GenreService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.List;

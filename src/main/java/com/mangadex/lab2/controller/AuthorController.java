@@ -1,7 +1,7 @@
 package com.mangadex.lab2.controller;
 
 import com.mangadex.lab2.model.Author;
-import com.mangadex.lab2.service.AuthorServices.AuthorService;
+import com.mangadex.lab2.service.author.AuthorService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;

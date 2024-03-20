@@ -1,4 +1,4 @@
-package com.mangadex.lab2.service.MangaServices;
+package com.mangadex.lab2.service.manga;
 
 import com.mangadex.lab2.model.Manga;
 import java.util.List;

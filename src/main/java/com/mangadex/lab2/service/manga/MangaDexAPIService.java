@@ -15,8 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 public class MangaDexAPIService {
     private final WebClient webClient;
-    private final static String TITLE1= "title";
-    private final static String ATTRIBUTES1 = "attributes";
+    private static final String TITLE1= "title";
+    private static final String ATTRIBUTES1 = "attributes";
     MangaDexAPIService() {
         this.webClient = WebClient
                 .builder()
@@ -36,9 +36,9 @@ public class MangaDexAPIService {
 
         if(responseManga != null) {
             for(JsonNode manga: responseManga.findValue("data")) {
-                if(manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName))
-                    if (manga.findValue("id") != null)
-                        return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
+                if(manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName)
+                        && manga.findValue("id") != null)
+                    return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
             }
         }
         return null;

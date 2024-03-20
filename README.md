@@ -6,7 +6,8 @@
 ## DB - PostgreSQL
 # manga <-> genre many to many
 # manga <-> author many to one, bidirectional
-# Doc
+
+# Documentation
 ## /manga
 ### GET /manga/list - вся манга в базе данных
 ### GET /manga/find/{id} - получение информации о манге с определённым id

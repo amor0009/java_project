@@ -1,5 +1,6 @@
 package com.mangadex.lab2.controller;
 
+import com.mangadex.lab2.aspects.AspectAnnotation;
 import com.mangadex.lab2.exceptions.ResourceNotFoundException;
 import com.mangadex.lab2.model.Author;
 import com.mangadex.lab2.service.author.AuthorService;
@@ -20,26 +21,22 @@ public class AuthorController {
     }
 
     @GetMapping(value = "find/{authorId}", produces = "application/json")
-    public ResponseEntity<Author> getAuthorById(@PathVariable String authorId)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Author> getAuthorById(@PathVariable String authorId) {
         return ResponseEntity.ok(authorService.getAuthorById(authorId));
     }
 
     @PostMapping("save")
-    public ResponseEntity<Author> addAuthor(@RequestBody Author author)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Author> addAuthor(@RequestBody Author author) {
         return new ResponseEntity<>(authorService.addAuthor(author), HttpStatus.OK);
     }
 
     @PutMapping("update")
-    public ResponseEntity<Author> updateAuthor(@RequestBody Author author)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Author> updateAuthor(@RequestBody Author author) {
         return new ResponseEntity<>(authorService.updateAuthor(author), HttpStatus.OK);
     }
 
     @DeleteMapping("delete/{authorId}")
-    public HttpStatus deleteAuthor(@PathVariable String authorId)
-            throws ResourceNotFoundException {
+    public HttpStatus deleteAuthor(@PathVariable String authorId) {
         authorService.deleteAuthorById(authorId);
         return HttpStatus.OK;
     }

@@ -1,5 +1,6 @@
 package com.mangadex.lab2.controller;
 
+import com.mangadex.lab2.aspects.AspectAnnotation;
 import com.mangadex.lab2.exceptions.ResourceNotFoundException;
 import com.mangadex.lab2.model.Genre;
 import com.mangadex.lab2.service.genre.GenreMangaDexService;
@@ -23,8 +24,7 @@ public class GenreController {
     }
 
     @GetMapping(value = "update")
-    public ResponseEntity<List<Genre>> updateGenres()
-            throws ResourceNotFoundException {
+    public ResponseEntity<List<Genre>> updateGenres() {
         List<Genre> genres = genreMangaDexService.getAllGenres();
         if (genres.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
@@ -34,8 +34,7 @@ public class GenreController {
     }
 
     @GetMapping(value = "find/{genreId}")
-    public ResponseEntity<Genre> getGenreById(@PathVariable String genreId)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Genre> getGenreById(@PathVariable String genreId) {
         return ResponseEntity.ok(genreService.findGenreById(genreId));
     }
 
@@ -48,14 +47,12 @@ public class GenreController {
     }
 
     @PutMapping(value = "update")
-    public ResponseEntity<Genre> updateGenre(@RequestBody Genre genre)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Genre> updateGenre(@RequestBody Genre genre) {
         return new ResponseEntity<>(genreService.updateGenre(genre), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "delete/{genreId}", produces = "application/json")
-    public HttpStatus deleteGenre(@PathVariable String genreId)
-            throws ResourceNotFoundException {
+    public HttpStatus deleteGenre(@PathVariable String genreId) {
         genreService.deleteGenre(genreId);
         return HttpStatus.OK;
     }

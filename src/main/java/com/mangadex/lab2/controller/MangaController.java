@@ -1,5 +1,6 @@
 package com.mangadex.lab2.controller;
 
+import com.mangadex.lab2.aspects.AspectAnnotation;
 import com.mangadex.lab2.exceptions.ResourceNotFoundException;
 import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.service.manga.MangaDexAPIService;
@@ -18,8 +19,7 @@ public class MangaController {
     private MangaDexAPIService mangaDexAPIService;
 
     @GetMapping(value="manga_dex")
-    public ResponseEntity<Manga> addMangaFromMangaDex(@RequestParam String titleName)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Manga> addMangaFromMangaDex(@RequestParam String titleName) {
         String mangaID = mangaDexAPIService.getMangaId(titleName);
         Manga manga =  mangaDexAPIService.getMangaInfo(mangaID);
         mangaService.saveManga(manga);
@@ -32,14 +32,12 @@ public class MangaController {
     }
 
     @GetMapping("find/{id}")
-    public ResponseEntity<Manga> getMangaByID(@PathVariable String id)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Manga> getMangaByID(@PathVariable String id) {
         return ResponseEntity.ok(mangaService.findByID(id));
     }
 
     @PostMapping("save")
-    public ResponseEntity<Manga> saveManga(@RequestBody Manga manga)
-            throws ResourceNotFoundException {
+    public ResponseEntity<Manga> saveManga(@RequestBody Manga manga) {
         if(manga == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
@@ -47,8 +45,8 @@ public class MangaController {
     }
 
     @PutMapping("update")
-    public ResponseEntity<Manga> updateManga(@RequestBody Manga manga)
-            throws ResourceNotFoundException {
+    @AspectAnnotation
+    public ResponseEntity<Manga> updateManga(@RequestBody Manga manga) {
         return new ResponseEntity<>(mangaService.updateManga(manga), HttpStatus.OK);
     }
 

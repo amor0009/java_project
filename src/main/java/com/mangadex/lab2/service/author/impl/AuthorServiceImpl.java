@@ -1,10 +1,8 @@
 package com.mangadex.lab2.service.author.impl;
 
-import com.mangadex.lab2.aspects.AspectAnnotation;
 import com.mangadex.lab2.cache.LRUCacheAuthor;
 import com.mangadex.lab2.cache.LRUCacheManga;
 import com.mangadex.lab2.exceptions.BadRequestException;
-import com.mangadex.lab2.exceptions.ResourceNotFoundException;
 import com.mangadex.lab2.model.Author;
 import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.repository.AuthorRepository;

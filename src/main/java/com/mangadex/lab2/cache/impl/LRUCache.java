@@ -1,6 +1,5 @@
 package com.mangadex.lab2.cache.impl;
 
-import com.mangadex.lab2.aspects.AspectAnnotation;
 import com.mangadex.lab2.cache.Cache;
 import lombok.Getter;
 import java.util.HashMap;

@@ -1,7 +1,5 @@
 package com.mangadex.lab2.controller;
 
-import com.mangadex.lab2.aspects.AspectAnnotation;
-import com.mangadex.lab2.exceptions.ResourceNotFoundException;
 import com.mangadex.lab2.model.Author;
 import com.mangadex.lab2.service.author.AuthorService;
 import lombok.AllArgsConstructor;

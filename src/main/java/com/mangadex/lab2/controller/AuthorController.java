@@ -1,8 +1,11 @@
 package com.mangadex.lab2.controller;
 
+import com.mangadex.lab2.exceptions.ResourceNotFoundException;
 import com.mangadex.lab2.model.Author;
 import com.mangadex.lab2.service.author.AuthorService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -11,25 +14,33 @@ import java.util.List;
 @AllArgsConstructor
 public class AuthorController {
     private AuthorService authorService;
-
     @GetMapping(value = "list")
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();
     }
+
     @GetMapping(value = "find/{authorId}", produces = "application/json")
-    public Author getAuthorById(@PathVariable String authorId) {
-        return authorService.getAuthorById(authorId);
+    public ResponseEntity<Author> getAuthorById(@PathVariable String authorId)
+            throws ResourceNotFoundException {
+        return ResponseEntity.ok(authorService.getAuthorById(authorId));
     }
+
     @PostMapping("save")
-    public Author addAuthor(@RequestBody Author author) {
-        return authorService.addAuthor(author);
+    public ResponseEntity<Author> addAuthor(@RequestBody Author author)
+            throws ResourceNotFoundException {
+        return new ResponseEntity<>(authorService.addAuthor(author), HttpStatus.OK);
     }
+
     @PutMapping("update")
-    public Author updateAuthor(@RequestBody Author author) {
-        return authorService.updateAuthor(author);
+    public ResponseEntity<Author> updateAuthor(@RequestBody Author author)
+            throws ResourceNotFoundException {
+        return new ResponseEntity<>(authorService.updateAuthor(author), HttpStatus.OK);
     }
+
     @DeleteMapping("delete/{authorId}")
-    public void deleteAuthor(@PathVariable String authorId) {
+    public HttpStatus deleteAuthor(@PathVariable String authorId)
+            throws ResourceNotFoundException {
         authorService.deleteAuthorById(authorId);
+        return HttpStatus.OK;
     }
 }

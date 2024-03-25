@@ -5,8 +5,8 @@ import java.util.List;
 
 public interface MangaService {
     List<Manga> getMangas();
-    void saveManga(Manga manga);
+    Manga saveManga(Manga manga);
     Manga findByID(String id);
     void deleteManga(String id);
-    void updateManga(Manga manga);
+    Manga updateManga(Manga manga);
 }

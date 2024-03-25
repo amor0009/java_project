@@ -1,14 +1,13 @@
 package com.mangadex.lab2.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
-import lombok.Data;
-import java.util.Set;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "genres")
 public class Genre {
@@ -16,7 +15,7 @@ public class Genre {
     private String id;
     private String name;
     private String type;
-    @ManyToMany(mappedBy = "genres")
+    @ManyToMany(mappedBy = "genres", cascade = {CascadeType.MERGE, CascadeType.REFRESH})
     @JsonIgnore
-    private Set<Manga> mangas;
+    private List<Manga> mangas;
 }

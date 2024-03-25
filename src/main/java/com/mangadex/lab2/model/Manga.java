@@ -1,12 +1,11 @@
 package com.mangadex.lab2.model;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "mangas")
 public class Manga {
@@ -32,13 +31,4 @@ public class Manga {
             inverseJoinColumns = @JoinColumn(name = "genre_id")
     )
     private List<Genre> genres;
-
-    @JsonSetter("author")
-    public void setAuthor(Author author) {
-        this.author = author;
-    }
-    @JsonGetter("author")
-    public Author getAuthor() {
-        return this.author;
-    }
 }

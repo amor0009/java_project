@@ -2,10 +2,12 @@ package com.mangadex.lab2.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "Authors")
 public class Author {
@@ -14,7 +16,7 @@ public class Author {
     @Column(unique = true)
     private String id;
     private String type;
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.REMOVE)
     @JsonIgnore
     private Set<Manga> mangas;
 }

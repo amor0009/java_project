@@ -10,7 +10,6 @@ import java.util.List;
 @Repository
 public interface GenreRepository extends JpaRepository<Genre, String> {
     Genre findGenreById(String id);
-
     @Query(value = "DELETE FROM manga_genre where genre_id =:genreId RETURNING manga_id", nativeQuery = true)
     List<String> deleteGenreByIdAndReturnMangasId(@Param("genreId") String id);
 }

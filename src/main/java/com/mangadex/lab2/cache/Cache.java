@@ -1,10 +1,33 @@
 package com.mangadex.lab2.cache;
 
-import java.util.Optional;
+import org.springframework.stereotype.Component;
+import java.util.Map;
+import java.util.LinkedHashMap;
 
-public interface Cache<K, V> {
-    Optional<V> get(K key);
-    int size();
-    void put(K key, V value);
-    boolean containsKey(K key);
+@Component
+public class Cache {
+    private static final Integer MAX_CACHE_SIZE = 50;
+    private final Map<String, Object> cache = new LinkedHashMap<>(MAX_CACHE_SIZE, 0.75f, true) {
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<String, Object> eldest) {
+            return size() > MAX_CACHE_SIZE;
+        }
+    };
+    public void put(String key, Object value) {
+        cache.put(key, value);
+    }
+
+    public Object get(String key) {
+        return cache.get(key);
+    }
+    public boolean containsKey(String key) {
+        return cache.containsKey(key);
+    }
+    public void remove(String key) {
+        cache.remove(key);
+    }
+
+    public int size() {
+        return cache.size();
+    }
 }

@@ -1,6 +1,5 @@
 package com.mangadex.lab2.controller;
 
-import com.mangadex.lab2.aspects.AspectAnnotation;
 import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.service.manga.MangaDexAPIService;
 import com.mangadex.lab2.service.manga.MangaService;
@@ -44,7 +43,6 @@ public class MangaController {
     }
 
     @PutMapping("update")
-    @AspectAnnotation
     public ResponseEntity<Manga> updateManga(@RequestBody Manga manga) {
         return new ResponseEntity<>(mangaService.updateManga(manga), HttpStatus.OK);
     }

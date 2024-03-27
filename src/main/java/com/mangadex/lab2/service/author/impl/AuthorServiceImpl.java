@@ -1,64 +1,78 @@
 package com.mangadex.lab2.service.author.impl;
 
-import com.mangadex.lab2.cache.LRUCacheAuthor;
-import com.mangadex.lab2.cache.LRUCacheManga;
-import com.mangadex.lab2.exceptions.BadRequestException;
+import com.mangadex.lab2.cache.Cache;
 import com.mangadex.lab2.model.Author;
-import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.repository.AuthorRepository;
 import com.mangadex.lab2.service.author.AuthorService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class AuthorServiceImpl implements AuthorService {
+    private static final String CACHE_INFO_GET = "Cached data taken for key ";
+    private static final String CACHE_INFO_REMOVE = "Cached data removed for key ";
+    private static final String CACHE_INFO_UPDATE = "Cached data updated for key ";
+    private static final String AUTHOR_KEY = "AUTHOR ID ";
+
     private AuthorRepository authorRepository;
-    private LRUCacheAuthor lruCacheAuthor;
-    private LRUCacheManga lruCacheManga;
-    private static final String NO_AUTHOR = "Author doesn't exist with that id = ";
+    private Cache cache;
+
     @Override
     public List<Author> getAllAuthors() {
+        log.info("all information is obtained from database by author");
         return authorRepository.findAll();
     }
+
     @Override
     public Author getAuthorById(String id) {
-        Optional<Author> author = lruCacheAuthor.get(id);
-        if (author.isEmpty()) {
-            author = authorRepository.findById(id);
-            if (author.isEmpty()) {
-                return null;
-            }
-            lruCacheAuthor.put(author.get().getId(), author.get());
+        String key = AUTHOR_KEY + id;
+        Author author = (Author) cache.get(key);
+        if (author != null) {
+            String logMessage = CACHE_INFO_GET + key;
+            log.info(logMessage);
+            return author;
         }
-        return author.get();
-    }
-    @Override
-    public Author addAuthor(Author author) {
-        if (Boolean.TRUE.equals(authorRepository.existsById(author.getId())))
-            throw new BadRequestException(NO_AUTHOR + author.getId());
-        if (author.getId() == null || author.getName() == null || author.getType() == null)
-            throw new BadRequestException("Fields [id, name, type] have to be provided");
-        authorRepository.save(author);
-        lruCacheAuthor.put(author.getId(), author);
+        author = authorRepository.findById(id).orElse(null);
+        cache.put(key, author);
+        log.info("information is obtained from database");
         return author;
     }
+
+    @Override
+    public Author addAuthor(Author author) {
+        log.info("new information is added to database");
+        return authorRepository.save(author);
+    }
+
     @Override
     public Author updateAuthor(Author author) {
-        Author newAuthor = authorRepository.save(author);
-        lruCacheAuthor.put(newAuthor.getId(), newAuthor);
-        return newAuthor;
+        String key = AUTHOR_KEY + author.getId();
+        if (cache.containsKey(key)) {
+            cache.remove(key);
+            cache.put(key, author);
+            String logMessage = CACHE_INFO_UPDATE + key;
+            log.info(logMessage);
+            log.info("information in the cache has been updated");
+        }
+        log.info("information in the database has been updated");
+        return authorRepository.save(author);
     }
+
     @Override
     public void deleteAuthorById(String id) {
-        Optional<Author> author = authorRepository.findById(id);
-        if(author.isPresent()) {
-            lruCacheAuthor.remove(id);
-            for(Manga manga: author.get().getMangas())
-                lruCacheManga.remove(manga.getId());
-            authorRepository.deleteById(id);
+        String key = AUTHOR_KEY + id;
+        if(cache.containsKey(key)) {
+            cache.remove(key);
+            String logMessage = CACHE_INFO_REMOVE + key;
+            log.info(logMessage);
+            log.info("information in the cache has been deleted");
         }
+        authorRepository.deleteById(id);
+        log.info("information in the database has been deleted");
     }
 }
+

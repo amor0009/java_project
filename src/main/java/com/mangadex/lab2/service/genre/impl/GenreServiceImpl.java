@@ -1,63 +1,83 @@
 package com.mangadex.lab2.service.genre.impl;
 
-import com.mangadex.lab2.cache.LRUCacheGenre;
-import com.mangadex.lab2.cache.LRUCacheManga;
+import com.mangadex.lab2.cache.Cache;
 import com.mangadex.lab2.model.Genre;
-import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.repository.GenreRepository;
 import com.mangadex.lab2.service.genre.GenreService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class GenreServiceImpl implements GenreService {
+    private static final String CACHE_INFO_GET = "Cached data taken for key ";
+    private static final String CACHE_INFO_REMOVE = "Cached data removed for key ";
+    private static final String CACHE_INFO_UPDATE = "Cached data updated for key ";
+    private static final String GENRE_KEY = "GENRE ID ";
+
     private final GenreRepository genreRepository;
-    private LRUCacheGenre cacheGenre;
-    private LRUCacheManga cacheManga;
+    private Cache cache;
+
     @Override
     public List<Genre> getAllGenres() {
+        log.info("all information is obtained from database");
         return genreRepository.findAll();
     }
 
     @Override
     public Genre saveGenre(Genre genre) {
-        Genre newGenre = genreRepository.save(genre);
-        cacheGenre.put(newGenre.getId(), newGenre);
-        return newGenre;
+        log.info("new information is added to database");
+        return genreRepository.save(genre);
     }
 
     @Override
     public Genre findGenreById(String id) {
-        Genre genre = genreRepository.findGenreById(id);
-        cacheGenre.put(genre.getId(), genre);
+        String key = GENRE_KEY + id;
+        Genre genre = (Genre) cache.get(id);
+        if (genre != null) {
+            String logMessage = CACHE_INFO_GET + key;
+            log.info(logMessage);
+            return genre;
+        }
+        genre = genreRepository.findGenreById(id);
+        cache.put(id, genre);
+        log.info("information is obtained from database");
         return genre;
     }
 
     @Override
     public Genre updateGenre(Genre genre) {
-        Genre newGenre = genreRepository.save(genre);
-        for(Manga manga: newGenre.getMangas()) {
-            cacheManga.remove(manga.getId());
+        String key = GENRE_KEY + genre.getId();
+        if (cache.containsKey(key)) {
+            cache.remove(key);
+            cache.put(key, genre);
+            String logMessage = CACHE_INFO_UPDATE + key;
+            log.info(logMessage);
+            log.info("information in the cache has been updated");
         }
-        cacheGenre.put(newGenre.getId(), newGenre);
-        return newGenre;
+        log.info("information in the database has been updated");
+        return genreRepository.save(genre);
     }
+
     @Override
     public List<Genre> saveAllGenres(List<Genre> genres) {
+        log.info("new information is added to database");
         return genreRepository.saveAll(genres);
     }
+
     @Override
     public void deleteGenre(String id) {
-        Genre genre = genreRepository.findGenreById(id);
-        if(genre != null) {
-            List<String> mangasId = genreRepository.deleteGenreByIdAndReturnMangasId(id);
-            for(String mangaId: mangasId) {
-                cacheManga.remove(mangaId);
-            }
-            cacheGenre.remove(id);
-            genreRepository.deleteById(id);
+        String key = GENRE_KEY + id;
+        if (cache.containsKey(key)) {
+            cache.remove(key);
+            String logMessage = CACHE_INFO_REMOVE + key;
+            log.info(logMessage);
+            log.info("information in the cache has been deleted");
         }
+        genreRepository.deleteById(id);
+        log.info("information in the database has been deleted");
     }
 }

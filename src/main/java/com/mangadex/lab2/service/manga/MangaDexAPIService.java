@@ -21,6 +21,8 @@ public class MangaDexAPIService {
     private static final String TITLE1= "title";
     private static final String ATTRIBUTES1 = "attributes";
 
+    private static final String NEW_INFO = "new information is added to database";
+
     private final WebClient webClient = WebClient
             .builder()
             .baseUrl("https://api.mangadex.org")
@@ -80,7 +82,7 @@ public class MangaDexAPIService {
             }
         } else
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-        log.info("new information is added to database");
+        log.info(NEW_INFO);
         return genres;
     }
 
@@ -108,7 +110,7 @@ public class MangaDexAPIService {
                 .substring(1, authorResponse.findValue("type").toPrettyString().length() - 1));
         author.setId(authorId);
         cache.put(key, author);
-        log.info("new information is added to database");
+        log.info(NEW_INFO);
         return author;
     }
 
@@ -150,7 +152,7 @@ public class MangaDexAPIService {
         manga.setAuthor(author);
         manga.setGenres(genres);
         cache.put(key, manga);
-        log.info("new information is added to database");
+        log.info(NEW_INFO);
         return manga;
     }
 }

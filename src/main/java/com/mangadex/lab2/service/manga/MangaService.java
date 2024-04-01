@@ -7,6 +7,7 @@ public interface MangaService {
     List<Manga> getMangas();
     Manga saveManga(Manga manga);
     Manga findByID(String id);
+    Manga findByName(String titleName);
     void deleteManga(String id);
     Manga updateManga(Manga manga);
 }

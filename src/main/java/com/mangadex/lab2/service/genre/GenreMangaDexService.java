@@ -16,26 +16,25 @@ import java.util.List;
 @AllArgsConstructor
 @Slf4j
 public class GenreMangaDexService {
-    private final WebClient webClient;
+    private final WebClient webClient = WebClient
+            .builder()
+            .baseUrl("https://api.mangadex.org/manga/tag")
+            .build();
+
     private Cache cache;
 
-    GenreMangaDexService() {
-        webClient = WebClient
-                .builder()
-                .baseUrl("https://api.mangadex.org/manga/tag")
-                .build();
-    }
     public List<Genre> getAllGenres() {
         JsonNode genreResponse = webClient.get()
                 .retrieve()
                 .bodyToMono(JsonNode.class)
                 .block();
+
         if (genreResponse == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
         List<Genre> genreList = new ArrayList<>();
-        Genre genre = new Genre();
         for(JsonNode element: genreResponse.findValue("data")) {
+            Genre genre = new Genre();
             genre.setId(element.findValue("id").toPrettyString()
                     .substring(1, element.findValue("id").toPrettyString().length() - 1));
             genre.setType(element.findValue("group").toPrettyString()
@@ -43,7 +42,8 @@ public class GenreMangaDexService {
             genre.setName(element.findValue("attributes").findValue("name").findValue("en").toPrettyString()
                     .substring(1, element.findValue("attributes").findValue("name").findValue("en").toPrettyString().length() - 1));
             genreList.add(genre);
-            cache.put(genre.getId(), genre);
+            String key = "GENRE ID " + genre.getId();
+            cache.put(key, genre);
         }
         log.info("new information is added to database");
         return genreList;

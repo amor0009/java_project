@@ -15,21 +15,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-@AllArgsConstructor
 @Slf4j
+@AllArgsConstructor
 public class MangaDexAPIService {
     private static final String TITLE1= "title";
     private static final String ATTRIBUTES1 = "attributes";
 
-    private final WebClient webClient;
-    private Cache cache;
+    private final WebClient webClient = WebClient
+            .builder()
+            .baseUrl("https://api.mangadex.org")
+            .build();
 
-    MangaDexAPIService() {
-        this.webClient = WebClient
-                .builder()
-                .baseUrl("https://api.mangadex.org")
-                .build();
-    }
+    private Cache cache;
 
     public String getMangaId(String titleName) {
         JsonNode responseManga =  webClient.get()
@@ -44,8 +41,7 @@ public class MangaDexAPIService {
 
         if (responseManga != null) {
             for(JsonNode manga: responseManga.findValue("data")) {
-                if(manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName)
-                        && manga.findValue("id") != null)
+                if(manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName))
                     return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
             }
         } else
@@ -54,21 +50,17 @@ public class MangaDexAPIService {
     }
 
     public String getAuthorId(JsonNode mangaResponse) {
-        String authorId = null;
-        if (mangaResponse == null) {
+        if (mangaResponse != null) {
             for(JsonNode value: mangaResponse.findValues("relationships")) {
                 if(!value.isEmpty()) {
-                    authorId = value.findValue("id").toPrettyString()
+                     return value.findValue("id").toPrettyString()
                             .substring(1, value.findValue("id").toPrettyString().length() - 1);
-                    break;
                 }
             }
-            if (authorId == null)
-                throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         } else
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
-        return authorId;
+        return null;
     }
 
     public List<Genre> getGenresInfo(JsonNode mangaResponse) {
@@ -83,7 +75,8 @@ public class MangaDexAPIService {
                 genre.setName(element.findValue(ATTRIBUTES1).findValue("name").findValue("en").toPrettyString()
                         .substring(1, element.findValue(ATTRIBUTES1).findValue("name").findValue("en").toPrettyString().length() - 1));
                 genres.add(genre);
-                cache.put(genre.getId(), genre);
+                String key = "GENRE ID " + genre.getId();
+                cache.put(key, genre);
             }
         } else
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
@@ -92,6 +85,7 @@ public class MangaDexAPIService {
     }
 
     public Author getAuthorInfo(String authorId) {
+        String key = "AUTHOR ID " + authorId;
         if (authorId == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
@@ -113,12 +107,13 @@ public class MangaDexAPIService {
         author.setType(authorResponse.findValue("type").toPrettyString()
                 .substring(1, authorResponse.findValue("type").toPrettyString().length() - 1));
         author.setId(authorId);
-        cache.put(authorId, author);
+        cache.put(key, author);
         log.info("new information is added to database");
         return author;
     }
 
     public Manga getMangaInfo(String mangaId) {
+        String key = "MANGA ID " + mangaId;
         if (mangaId == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
@@ -154,7 +149,7 @@ public class MangaDexAPIService {
         manga.setYear(mangaResponse.findValue("year").asInt());
         manga.setAuthor(author);
         manga.setGenres(genres);
-        cache.put(mangaId, manga);
+        cache.put(key, manga);
         log.info("new information is added to database");
         return manga;
     }

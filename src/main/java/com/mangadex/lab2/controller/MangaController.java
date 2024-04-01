@@ -17,11 +17,11 @@ public class MangaController {
     private MangaDexAPIService mangaDexAPIService;
 
     @GetMapping(value="manga_dex")
-    public ResponseEntity<Manga> addMangaFromMangaDex(@RequestParam String titleName) {
+    public Manga addMangaFromMangaDex(@RequestParam String titleName) {
         String mangaID = mangaDexAPIService.getMangaId(titleName);
         Manga manga =  mangaDexAPIService.getMangaInfo(mangaID);
         mangaService.saveManga(manga);
-        return new ResponseEntity<>(manga, HttpStatus.OK);
+        return manga;
     }
 
     @GetMapping("list")
@@ -29,9 +29,14 @@ public class MangaController {
         return mangaService.getMangas();
     }
 
-    @GetMapping("find/{id}")
+    @GetMapping("find_by_id/{id}")
     public ResponseEntity<Manga> getMangaByID(@PathVariable String id) {
         return ResponseEntity.ok(mangaService.findByID(id));
+    }
+
+    @GetMapping("find_by_name")
+    public ResponseEntity<Manga> getMangaByName(@RequestParam String titleName) {
+        return ResponseEntity.ok(mangaService.findByName(titleName));
     }
 
     @PostMapping("save")

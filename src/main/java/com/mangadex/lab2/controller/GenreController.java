@@ -1,8 +1,10 @@
 package com.mangadex.lab2.controller;
 
 import com.mangadex.lab2.model.Genre;
+import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.service.genre.GenreMangaDexService;
 import com.mangadex.lab2.service.genre.GenreService;
+import com.mangadex.lab2.service.manga.MangaService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

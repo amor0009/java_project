@@ -1,6 +1,7 @@
 package com.mangadex.lab2.service.manga.impl;
 
 import com.mangadex.lab2.cache.Cache;
+import com.mangadex.lab2.model.Genre;
 import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.repository.MangaRepository;
 import com.mangadex.lab2.service.manga.MangaService;
@@ -39,13 +40,28 @@ public class MangaServiceImpl implements MangaService {
     public Manga findByID(String id) {
         String key = MANGA_KEY + id;
         Manga manga = (Manga) cache.get(key);
-        if (cache != null) {
+        if (manga != null) {
             String logMessage = CACHE_INFO_GET + key;
             log.info(logMessage);
             return manga;
         }
         manga = mangaRepository.findMangaById(id);
-        cache.put(id, manga);
+        cache.put(key, manga);
+        log.info("information is obtained from database");
+        return manga;
+    }
+
+    @Override
+    public Manga findByName(String titleName) {
+        String key = "MANGA NAME" + titleName;
+        Manga manga = (Manga) cache.get(key);
+        if (manga != null) {
+            String logMessage = CACHE_INFO_GET + key;
+            log.info(logMessage);
+            return manga;
+        }
+        manga = mangaRepository.findMangaByName(titleName);
+        cache.put(key, manga);
         log.info("information is obtained from database");
         return manga;
     }

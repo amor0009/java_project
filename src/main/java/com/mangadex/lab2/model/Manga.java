@@ -11,7 +11,6 @@ import java.util.List;
 public class Manga {
     private String title;
     @Id
-    @Column(unique = true)
     private String id;
     private String type;
     private String status;

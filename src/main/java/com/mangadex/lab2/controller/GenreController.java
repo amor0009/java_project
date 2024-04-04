@@ -49,7 +49,7 @@ public class GenreController {
         return new ResponseEntity<>(genreService.updateGenre(genre), HttpStatus.OK);
     }
 
-    @DeleteMapping(value = "delete/{genreId}", produces = "application/json")
+    @DeleteMapping(value = "delete/{genreId}")
     public HttpStatus deleteGenre(@PathVariable String genreId) {
         genreService.deleteGenre(genreId);
         return HttpStatus.OK;

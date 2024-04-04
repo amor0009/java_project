@@ -7,6 +7,8 @@ import com.mangadex.lab2.service.genre.GenreService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @Service
@@ -69,6 +71,7 @@ public class GenreServiceImpl implements GenreService {
     }
 
     @Override
+    @Transactional
     public void deleteGenre(String id) {
         String key = GENRE_KEY + id;
         if (cache.containsKey(key)) {
@@ -77,6 +80,8 @@ public class GenreServiceImpl implements GenreService {
             log.info(logMessage);
             log.info("information in the cache has been deleted");
         }
+
+        genreRepository.deleteGenreByIdAndReturnMangaIds(id);
         genreRepository.deleteById(id);
         log.info("information in the database has been deleted");
     }

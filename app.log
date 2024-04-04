@@ -1,4 +1,4 @@
-2024-04-01 19:29:12.113 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+    2024-04-01 19:29:12.113 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
 2024-04-01 19:29:12.152 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 17236 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
 2024-04-01 19:29:12.153 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
 2024-04-01 19:29:12.801 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
@@ -1974,3 +1974,526 @@
 2024-04-01 22:44:10.925 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
 2024-04-01 22:44:10.990 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
 2024-04-01 22:44:10.990 [http-nio-8080-exec-2] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-01 22:57:32.903 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-01 22:57:32.905 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-01 22:57:32.907 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-02 16:21:33.058 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 12380 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-02 16:21:33.061 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-02 16:21:33.867 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02 16:21:34.041 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 166 ms. Found 3 JPA repository interfaces.
+2024-04-02 16:21:34.760 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-02 16:21:34.769 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-02 16:21:34.771 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-02 16:21:34.772 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-02 16:21:34.841 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-02 16:21:34.842 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1744 ms
+2024-04-02 16:21:35.024 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02 16:21:35.098 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-02 16:21:35.139 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-02 16:21:35.406 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02 16:21:35.439 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-02 16:21:35.717 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ba13fed
+2024-04-02 16:21:35.718 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-02 16:21:36.120 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-02 16:21:37.099 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02 16:21:37.413 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 16:21:38.076 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02 16:21:38.303 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02 16:21:39.156 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-02 16:21:39.176 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-02 16:21:39.186 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 6.499 seconds (process running for 7.824)
+2024-04-02 16:27:27.733 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02 16:27:27.735 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-02 16:27:27.737 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 08:50:59.320 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 14092 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 08:50:59.323 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 08:51:00.234 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 08:51:00.424 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 181 ms. Found 3 JPA repository interfaces.
+2024-04-04 08:51:01.082 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 08:51:01.091 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 08:51:01.093 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 08:51:01.093 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 08:51:01.172 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 08:51:01.173 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1810 ms
+2024-04-04 08:51:01.341 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 08:51:01.412 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 08:51:01.452 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 08:51:01.709 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 08:51:01.738 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 08:51:02.189 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5814b4fb
+2024-04-04 08:51:02.191 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 08:51:02.583 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 08:51:03.572 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 08:51:04.017 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 08:51:04.681 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 08:51:04.907 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 08:51:05.768 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 08:51:05.787 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 08:51:05.796 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 6.859 seconds (process running for 11.07)
+2024-04-04 08:54:00.730 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 08:54:00.730 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 08:54:00.731 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 08:54:00.755 [http-nio-8080-exec-1] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 08:54:00.978 [http-nio-8080-exec-2] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 08:54:04.916 [http-nio-8080-exec-3] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 08:54:04.972 [http-nio-8080-exec-4] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 08:54:10.247 [http-nio-8080-exec-2] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 277 ms
+2024-04-04 08:54:29.651 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.652 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.653 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:29.653 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:29.653 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:29.653 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 08:54:37.113 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.113 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.114 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:37.115 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.852 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.853 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.853 [http-nio-8080-exec-5] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:42.853 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:54:42.853 [http-nio-8080-exec-5] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 08:54:42.853 [http-nio-8080-exec-5] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 08:54:48.227 [http-nio-8080-exec-6] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-04 08:55:42.584 [http-nio-8080-exec-8] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 08:55:42.584 [http-nio-8080-exec-8] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:55:42.584 [http-nio-8080-exec-8] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data updated for key MANGA ID 239d6260-d71f-43b0-afff-074e3619e3de
+2024-04-04 08:55:42.584 [http-nio-8080-exec-8] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been updated
+2024-04-04 08:55:42.585 [http-nio-8080-exec-8] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-04 08:57:28.664 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-04 08:57:39.893 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 08:57:39.893 [http-nio-8080-exec-2] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data removed for key MANGA ID 239d6260-d71f-43b0-afff-074e3619e3de
+2024-04-04 08:57:39.893 [http-nio-8080-exec-2] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been deleted
+2024-04-04 08:57:39.899 [http-nio-8080-exec-2] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-04 08:57:44.285 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-04 08:57:56.202 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-04-04 08:57:56.249 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 08:57:56.249 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-04 08:58:07.354 [http-nio-8080-exec-5] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-04 08:58:25.218 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 08:58:25.218 [http-nio-8080-exec-6] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 391b0423-d847-456f-aff0-8b0cfc03066b
+2024-04-04 08:58:25.218 [http-nio-8080-exec-6] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 08:58:25.248 [http-nio-8080-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 08:58:25.248 [http-nio-8080-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(391b0423-d847-456f-aff0-8b0cfc03066b) is still referenced from table "manga_genre".
+2024-04-04 08:58:25.258 [http-nio-8080-exec-6] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 08:59:22.378 [http-nio-8080-exec-7] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-04 08:59:43.155 [http-nio-8080-exec-9] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-04 09:00:03.402 [http-nio-8080-exec-8] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:00:03.402 [http-nio-8080-exec-8] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID 7f718dfa-e5be-45ea-a5cb-0fcd3ed52d5f
+2024-04-04 09:00:03.402 [http-nio-8080-exec-8] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-04 09:00:03.410 [http-nio-8080-exec-8] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-04 09:00:10.993 [http-nio-8080-exec-10] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-04 09:00:23.311 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:00:23.312 [http-nio-8080-exec-1] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID 246984d8-340d-4544-871b-c962da4bb28b
+2024-04-04 09:00:23.312 [http-nio-8080-exec-1] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-04 09:00:23.314 [http-nio-8080-exec-1] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-04 09:00:28.217 [http-nio-8080-exec-2] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-04 09:00:34.115 [http-nio-8080-exec-3] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-04 09:00:46.187 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 09:00:46.187 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(391b0423-d847-456f-aff0-8b0cfc03066b) is still referenced from table "manga_genre".
+2024-04-04 09:00:46.188 [http-nio-8080-exec-4] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:00:47.132 [http-nio-8080-exec-5] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 09:00:47.132 [http-nio-8080-exec-5] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(391b0423-d847-456f-aff0-8b0cfc03066b) is still referenced from table "manga_genre".
+2024-04-04 09:00:47.133 [http-nio-8080-exec-5] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:03:33.860 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:03:33.862 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-04 09:03:33.864 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 09:03:38.075 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 14780 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:03:38.079 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:03:38.719 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:03:38.871 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:03:39.456 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:03:39.464 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:03:39.466 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:03:39.466 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:03:39.530 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:03:39.531 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1412 ms
+2024-04-04 09:03:39.688 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:03:39.744 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:03:39.776 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:03:39.996 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:03:40.023 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:03:40.140 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e8986b6
+2024-04-04 09:03:40.141 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:03:40.463 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:03:41.351 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:03:41.607 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:03:42.210 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:03:42.422 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:03:43.212 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:03:43.230 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:03:43.239 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.543 seconds (process running for 6.35)
+2024-04-04 09:04:28.269 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 09:04:28.269 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 09:04:28.270 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 09:04:29.562 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.562 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:04:29.562 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.563 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.563 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.563 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.563 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.563 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.563 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.564 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.564 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.564 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.564 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.564 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.564 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:04:29.565 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:04:29.565 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:04:29.565 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 09:04:46.370 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:04:46.370 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 36fd93ea-e8b8-445e-b836-358f02b3d33d
+2024-04-04 09:04:46.370 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 09:04:46.392 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 09:04:46.392 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(36fd93ea-e8b8-445e-b836-358f02b3d33d) is still referenced from table "manga_genre".
+2024-04-04 09:04:46.407 [http-nio-8080-exec-2] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:10:20.640 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 12732 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:10:20.644 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:10:21.404 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:10:21.571 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 159 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:10:22.205 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:10:22.213 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:10:22.215 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:10:22.215 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:10:22.282 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:10:22.282 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1587 ms
+2024-04-04 09:10:22.450 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:10:22.510 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:10:22.545 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:10:22.780 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:10:22.807 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:10:22.932 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@73d83141
+2024-04-04 09:10:22.933 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:10:23.262 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:10:24.221 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:10:24.483 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:10:25.160 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:10:25.373 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:10:26.186 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:10:26.205 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:10:26.215 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.988 seconds (process running for 7.029)
+2024-04-04 09:10:37.159 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 09:10:37.160 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 09:10:37.161 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 09:10:38.222 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.222 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:10:38.223 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.223 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.223 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.223 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.223 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.223 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.224 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:10:38.225 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:10:38.225 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:10:38.225 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 09:10:42.593 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:10:42.593 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 36fd93ea-e8b8-445e-b836-358f02b3d33d
+2024-04-04 09:10:42.593 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 09:10:42.605 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-04 09:10:42.615 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 09:10:42.616 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(36fd93ea-e8b8-445e-b836-358f02b3d33d) is still referenced from table "manga_genre".
+2024-04-04 09:10:42.624 [http-nio-8080-exec-2] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:10:46.742 [http-nio-8080-exec-3] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-04 09:10:46.745 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 09:10:46.745 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(36fd93ea-e8b8-445e-b836-358f02b3d33d) is still referenced from table "manga_genre".
+2024-04-04 09:10:46.746 [http-nio-8080-exec-3] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:10:47.385 [http-nio-8080-exec-4] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-04 09:10:47.388 [http-nio-8080-exec-4] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23503
+2024-04-04 09:10:47.388 [http-nio-8080-exec-4] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: update or delete on table "genres" violates foreign key constraint "fkogig4vjb76h876ajtcxgvcx90" on table "manga_genre"
+  Подробности: Key (id)=(36fd93ea-e8b8-445e-b836-358f02b3d33d) is still referenced from table "manga_genre".
+2024-04-04 09:10:47.389 [http-nio-8080-exec-4] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:12:22.387 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 461 ms
+2024-04-04 09:20:32.925 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:20:32.927 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-04 09:20:32.930 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 09:20:37.260 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 18044 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:20:37.263 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:20:37.963 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:20:38.121 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:20:38.746 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:20:38.755 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:20:38.757 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:20:38.757 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:20:38.830 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:20:38.831 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1524 ms
+2024-04-04 09:20:38.991 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:20:39.049 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:20:39.086 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:20:39.311 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:20:39.338 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:20:39.457 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bc52a41
+2024-04-04 09:20:39.458 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:20:39.788 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:20:40.696 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:20:40.940 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:20:41.509 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:20:41.770 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:20:42.619 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:20:42.637 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:20:42.647 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.758 seconds (process running for 6.52)
+2024-04-04 09:21:14.188 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 09:21:14.188 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 09:21:14.189 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 09:21:15.231 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.231 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:21:15.231 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.231 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.232 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.232 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.232 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.232 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.232 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.233 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.233 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.233 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.233 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.233 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.233 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:21:15.234 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:21:15.234 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:21:15.234 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 09:21:28.652 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:21:28.652 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 36fd93ea-e8b8-445e-b836-358f02b3d33d
+2024-04-04 09:21:28.653 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 09:21:28.709 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-04 09:22:50.310 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:22:50.312 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-04 09:22:50.314 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 09:22:54.710 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 15184 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:22:54.713 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:22:55.431 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:22:55.616 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 177 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:22:56.201 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:22:56.209 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:22:56.211 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:22:56.211 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:22:56.282 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:22:56.283 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1534 ms
+2024-04-04 09:22:56.436 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:22:56.492 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:22:56.529 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:22:56.750 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:22:56.776 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:22:56.892 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@31443680
+2024-04-04 09:22:56.893 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:22:57.217 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:22:58.110 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:22:58.364 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:22:58.928 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:22:59.189 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:22:59.972 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:22:59.990 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:22:59.999 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.654 seconds (process running for 6.397)
+2024-04-04 09:23:02.593 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:23:02.595 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-04 09:23:02.597 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 09:23:06.744 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 8872 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:23:06.747 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:23:07.367 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:23:07.516 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 142 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:23:08.098 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:23:08.107 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:23:08.109 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:23:08.109 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:23:08.172 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:23:08.173 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1391 ms
+2024-04-04 09:23:08.335 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:23:08.390 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:23:08.423 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:23:08.647 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:23:08.673 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:23:08.789 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e8986b6
+2024-04-04 09:23:08.791 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:23:09.114 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:23:10.004 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:23:10.234 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:23:10.799 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:23:11.060 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:23:11.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:23:11.881 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:23:11.890 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.5 seconds (process running for 6.225)
+2024-04-04 09:23:34.853 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 09:23:34.853 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 09:23:34.854 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.777 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.778 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.778 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.778 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.778 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.778 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.778 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:23:35.779 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:23:35.779 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:23:35.779 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 09:23:38.876 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:23:38.876 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 36fd93ea-e8b8-445e-b836-358f02b3d33d
+2024-04-04 09:23:38.876 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 09:23:38.927 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42601
+2024-04-04 09:23:38.927 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: syntax error at or near "AND"
+  Позиция: 25
+2024-04-04 09:23:38.935 [http-nio-8080-exec-2] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:24:21.078 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:24:21.080 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-04 09:24:21.082 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 09:24:25.292 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 3032 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:24:25.295 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:24:25.926 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:24:26.078 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 146 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:24:26.680 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:24:26.689 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:24:26.691 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:24:26.691 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:24:26.756 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:24:26.757 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1424 ms
+2024-04-04 09:24:26.921 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:24:26.980 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:24:27.014 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:24:27.243 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:24:27.271 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:24:27.501 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b5f7d2
+2024-04-04 09:24:27.503 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:24:27.827 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:24:28.772 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:24:29.016 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:24:29.618 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:24:29.889 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:24:30.714 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:24:30.735 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:24:30.744 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.809 seconds (process running for 6.596)
+2024-04-04 09:24:39.561 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 09:24:39.561 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 09:24:39.562 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 09:24:40.610 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.610 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:24:40.611 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.611 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.611 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.611 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.611 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.611 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.612 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:24:40.613 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:24:40.613 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:24:40.613 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 09:24:44.116 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:24:44.116 [http-nio-8080-exec-3] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 36fd93ea-e8b8-445e-b836-358f02b3d33d
+2024-04-04 09:24:44.116 [http-nio-8080-exec-3] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 09:24:44.166 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 02000
+2024-04-04 09:24:44.166 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Запрос не вернул результатов.
+2024-04-04 09:24:44.174 [http-nio-8080-exec-3] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:24:46.874 [http-nio-8080-exec-2] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 02000
+2024-04-04 09:24:46.874 [http-nio-8080-exec-2] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Запрос не вернул результатов.
+2024-04-04 09:24:46.875 [http-nio-8080-exec-2] ERROR c.m.l.exceptions.ExceptionsHandler - error 500
+2024-04-04 09:25:37.456 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:25:37.458 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-04 09:25:37.465 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-04 09:25:42.359 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 17648 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-04 09:25:42.362 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-04 09:25:43.029 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-04 09:25:43.192 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 155 ms. Found 3 JPA repository interfaces.
+2024-04-04 09:25:43.817 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-04 09:25:43.826 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:25:43.827 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-04 09:25:43.828 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-04 09:25:43.904 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-04 09:25:43.905 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1505 ms
+2024-04-04 09:25:44.070 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-04 09:25:44.129 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-04 09:25:44.166 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-04 09:25:44.403 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-04 09:25:44.430 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-04 09:25:44.660 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@492fa72a
+2024-04-04 09:25:44.661 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-04 09:25:44.991 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-04 09:25:45.905 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-04 09:25:46.132 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-04 09:25:46.734 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-04 09:25:47.002 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-04 09:25:47.860 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-04 09:25:47.879 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-04 09:25:47.889 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.926 seconds (process running for 6.709)
+2024-04-04 09:26:00.640 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-04 09:26:00.640 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-04 09:26:00.641 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-04-04 09:26:01.493 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.493 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:26:01.494 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.494 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.494 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.494 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.494 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.494 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.495 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.495 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.495 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.495 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.495 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.495 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.496 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:26:01.496 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:01.496 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-04 09:26:01.496 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-04 09:26:05.235 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-04-04 09:26:05.236 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 36fd93ea-e8b8-445e-b836-358f02b3d33d
+2024-04-04 09:26:05.236 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-04 09:26:05.305 [http-nio-8080-exec-2] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-04 09:26:43.083 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-04-04 09:26:43.144 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-04-04 09:26:43.144 [http-nio-8080-exec-3] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database

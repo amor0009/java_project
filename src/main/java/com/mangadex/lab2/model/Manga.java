@@ -18,7 +18,7 @@ public class Manga {
     private String lastChapter;
     private int year;
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinColumn(name="author_id", nullable=false)
+    @JoinColumn(name = "author_id", nullable = false)
     private Author author;
     @ManyToMany (cascade = {
             CascadeType.PERSIST,

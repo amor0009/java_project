@@ -65,7 +65,7 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public void deleteAuthorById(String id) {
         String key = AUTHOR_KEY + id;
-        if(cache.containsKey(key)) {
+        if (cache.containsKey(key)) {
             cache.remove(key);
             String logMessage = CACHE_INFO_REMOVE + key;
             log.info(logMessage);

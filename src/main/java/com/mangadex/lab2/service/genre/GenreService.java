@@ -5,9 +5,14 @@ import java.util.List;
 
 public interface GenreService {
     List<Genre> getAllGenres();
+
     List<Genre> saveAllGenres(List<Genre> genres);
+
     Genre saveGenre(Genre genre);
+
     Genre findGenreById(String id);
+
     Genre updateGenre(Genre genre);
+
     void deleteGenre(String id);
 }

@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 public class AuthorController {
     private AuthorService authorService;
+
     @GetMapping(value = "list")
     public List<Author> getAllAuthors() {
         return authorService.getAllAuthors();

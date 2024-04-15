@@ -29,11 +29,12 @@ public class GenreMangaDexService {
                 .bodyToMono(JsonNode.class)
                 .block();
 
-        if (genreResponse == null)
+        if (genreResponse == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
 
         List<Genre> genreList = new ArrayList<>();
-        for(JsonNode element: genreResponse.findValue("data")) {
+        for (JsonNode element: genreResponse.findValue("data")) {
             Genre genre = new Genre();
             genre.setId(element.findValue("id").toPrettyString()
                     .substring(1, element.findValue("id").toPrettyString().length() - 1));

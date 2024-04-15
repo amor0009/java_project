@@ -38,7 +38,7 @@ public class GenreController {
 
     @PostMapping(value = "save")
     public ResponseEntity<Genre> addGenre(@RequestBody Genre genre) {
-        if(genre == null) {
+        if (genre == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
         return new ResponseEntity<>(genreService.saveGenre(genre), HttpStatus.OK);

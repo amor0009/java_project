@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface MangaRepository extends JpaRepository<Manga, String> {
     void deleteById(String id);
+
     Manga findMangaById(String id);
 
     @Query(value = "SELECT * FROM mangas WHERE title =:titleName", nativeQuery = true)

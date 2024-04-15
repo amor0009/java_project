@@ -8,6 +8,7 @@ import java.util.LinkedHashMap;
 public class Cache {
     private final Map<String, Object> myCache;
     private static final Integer MAX_CACHE_SIZE = 50;
+
     public Cache() {
         this.myCache = new LinkedHashMap<>() {
             @Override
@@ -16,6 +17,7 @@ public class Cache {
             }
         };
     }
+
     public void put(String key, Object value) {
         myCache.put(key, value);
     }
@@ -23,9 +25,11 @@ public class Cache {
     public Object get(String key) {
         return myCache.get(key);
     }
+
     public boolean containsKey(String key) {
         return myCache.containsKey(key);
     }
+
     public void remove(String key) {
         myCache.remove(key);
     }

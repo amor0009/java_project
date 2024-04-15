@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
 import java.util.List;
 
 @RestController
@@ -16,12 +18,16 @@ public class MangaController {
     private MangaService mangaService;
     private MangaDexAPIService mangaDexAPIService;
 
-    @GetMapping(value="manga_dex")
-    public Manga addMangaFromMangaDex(@RequestParam String titleName) {
+    @GetMapping(value = "manga_dex")
+    public ResponseEntity<Manga> addMangaFromMangaDex(@RequestParam String titleName) {
+        Manga manga = mangaService.findByName(titleName);
+        if (manga != null) {
+            return new ResponseEntity<>(manga, HttpStatus.OK);
+        }
         String mangaID = mangaDexAPIService.getMangaId(titleName);
-        Manga manga =  mangaDexAPIService.getMangaInfo(mangaID);
+        manga =  mangaDexAPIService.getMangaInfo(mangaID);
         mangaService.saveManga(manga);
-        return manga;
+        return new ResponseEntity<>(manga, HttpStatus.OK);
     }
 
     @GetMapping("list")
@@ -41,7 +47,7 @@ public class MangaController {
 
     @PostMapping("save")
     public ResponseEntity<Manga> saveManga(@RequestBody Manga manga) {
-        if(manga == null) {
+        if (manga == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
         return new ResponseEntity<>(mangaService.saveManga(manga), HttpStatus.OK);

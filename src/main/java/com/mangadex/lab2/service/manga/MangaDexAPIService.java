@@ -18,7 +18,7 @@ import java.util.List;
 @Slf4j
 @AllArgsConstructor
 public class MangaDexAPIService {
-    private static final String TITLE1= "title";
+    private static final String TITLE1 = "title";
     private static final String ATTRIBUTES1 = "attributes";
 
     private static final String NEW_INFO = "new information is added to database";
@@ -42,25 +42,28 @@ public class MangaDexAPIService {
                 .block();
 
         if (responseManga != null) {
-            for(JsonNode manga: responseManga.findValue("data")) {
-                if(manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName))
+            for (JsonNode manga: responseManga.findValue("data")) {
+                if (manga.findValue(TITLE1).findValue("en").toPrettyString().substring(1, manga.findValue(TITLE1).findValue("en").toPrettyString().length() - 1).equals(titleName)) {
                     return manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1);
+                }
             }
-        } else
+        } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
         return null;
     }
 
     public String getAuthorId(JsonNode mangaResponse) {
         if (mangaResponse != null) {
-            for(JsonNode value: mangaResponse.findValues("relationships")) {
-                if(!value.isEmpty()) {
+            for (JsonNode value: mangaResponse.findValues("relationships")) {
+                if (!value.isEmpty()) {
                      return value.findValue("id").toPrettyString()
                             .substring(1, value.findValue("id").toPrettyString().length() - 1);
                 }
             }
-        } else
+        } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
 
         return null;
     }
@@ -68,7 +71,7 @@ public class MangaDexAPIService {
     public List<Genre> getGenresInfo(JsonNode mangaResponse) {
         List<Genre> genres = new ArrayList<>();
         if (mangaResponse != null) {
-            for(JsonNode element: mangaResponse.findValue("tags")) {
+            for (JsonNode element: mangaResponse.findValue("tags")) {
                 Genre genre = new Genre();
                 genre.setId(element.findValue("id").toPrettyString()
                         .substring(1, element.findValue("id").toPrettyString().length() - 1));
@@ -80,16 +83,18 @@ public class MangaDexAPIService {
                 String key = "GENRE ID " + genre.getId();
                 cache.put(key, genre);
             }
-        } else
+        } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
         log.info(NEW_INFO);
         return genres;
     }
 
     public Author getAuthorInfo(String authorId) {
         String key = "AUTHOR ID " + authorId;
-        if (authorId == null)
+        if (authorId == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
 
         JsonNode authorResponse = webClient.get()
                 .uri(uriBuilder -> uriBuilder
@@ -100,12 +105,13 @@ public class MangaDexAPIService {
                 .bodyToMono(JsonNode.class)
                 .block();
 
-        if (authorResponse == null)
+        if (authorResponse == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
 
         Author author = new Author();
         author.setName(authorResponse.findValue(ATTRIBUTES1).findValue("name").toPrettyString()
-                .substring(1,authorResponse.findValue(ATTRIBUTES1).findValue("name").toPrettyString().length() - 1));
+                .substring(1, authorResponse.findValue(ATTRIBUTES1).findValue("name").toPrettyString().length() - 1));
         author.setType(authorResponse.findValue("type").toPrettyString()
                 .substring(1, authorResponse.findValue("type").toPrettyString().length() - 1));
         author.setId(authorId);
@@ -116,20 +122,22 @@ public class MangaDexAPIService {
 
     public Manga getMangaInfo(String mangaId) {
         String key = "MANGA ID " + mangaId;
-        if (mangaId == null)
+        if (mangaId == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
 
         String authorId;
         JsonNode mangaResponse = webClient.get()
                 .uri(uriBuilder -> uriBuilder
-                        .path("/manga/"+ mangaId)
+                        .path("/manga/" + mangaId)
                         .build()
                 )
                 .retrieve()
                 .bodyToMono(JsonNode.class)
                 .block();
-        if (mangaResponse == null)
+        if (mangaResponse == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
 
         authorId = getAuthorId(mangaResponse);
         Author author = getAuthorInfo(authorId);
@@ -137,11 +145,11 @@ public class MangaDexAPIService {
 
         Manga manga = new Manga();
         manga.setTitle(mangaResponse.findValue(TITLE1).findValue("en").toPrettyString()
-                .substring(1, mangaResponse.findValue(TITLE1).findValue("en").toPrettyString().length() -1));
+                .substring(1, mangaResponse.findValue(TITLE1).findValue("en").toPrettyString().length() - 1));
         manga.setId(mangaResponse.findValue("id").toPrettyString()
                 .substring(1, mangaResponse.findValue("id").toPrettyString().length() - 1));
         manga.setType(mangaResponse.findValue("type").toPrettyString()
-                .substring(1,mangaResponse.findValue("type").toPrettyString().length() - 1));
+                .substring(1, mangaResponse.findValue("type").toPrettyString().length() - 1));
         manga.setStatus(mangaResponse.findValue("status").toPrettyString()
                 .substring(1, mangaResponse.findValue("status").toPrettyString().length() - 1));
         manga.setLastVolume(mangaResponse.findValue("lastVolume").toPrettyString()

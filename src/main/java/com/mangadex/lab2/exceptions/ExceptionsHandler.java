@@ -11,18 +11,17 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.servlet.NoHandlerFoundException;
-
+import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 @RestControllerAdvice
 @Slf4j
 @Validated
 public class ExceptionsHandler {
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(Exception.class)
-    public ErrorResponse handleExceptionServer(Exception ex) {
-        log.error("error 500");
-        return new ErrorResponse("Internal Server Error");
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(NoResourceFoundException.class)
+    public ErrorResponse handlerFoundException(Exception ex) {
+        log.error("error 404");
+        return new ErrorResponse("NOT FOUND");
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
@@ -34,10 +33,10 @@ public class ExceptionsHandler {
         return new ErrorResponse("BAD REQUEST");
     }
 
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    @ExceptionHandler(NoHandlerFoundException.class)
-    public ErrorResponse handlerFoundException(Exception ex) {
-        log.error("error 404");
-        return new ErrorResponse("NOT FOUND");
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(Exception.class)
+    public ErrorResponse handleExceptionServer(Exception ex) {
+        log.error("error 500");
+        return new ErrorResponse("INTERNAL_SERVER_ERROR");
     }
 }

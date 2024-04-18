@@ -31,7 +31,7 @@ public class LoggingAspect {
         logger.info("Cache remove method invoked: {}", methodName);
     }
 
-    @Pointcut("execution(* com.mangadex.lab2.service.*.*(..))")
+    @Pointcut("execution(* com.mangadex.lab2.service.*.*.*(..))")
     public void serviceMethods() { }
 
     @Before("serviceMethods()")

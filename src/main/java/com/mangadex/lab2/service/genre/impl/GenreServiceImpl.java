@@ -38,14 +38,14 @@ public class GenreServiceImpl implements GenreService {
     @Override
     public Genre findGenreById(String id) {
         String key = GENRE_KEY + id;
-        Genre genre = (Genre) cache.get(id);
+        Genre genre = (Genre) cache.get(key);
         if (genre != null) {
             String logMessage = CACHE_INFO_GET + key;
             log.info(logMessage);
             return genre;
         }
         genre = genreRepository.findGenreById(id);
-        cache.put(id, genre);
+        cache.put(key, genre);
         log.info("information is obtained from database");
         return genre;
     }

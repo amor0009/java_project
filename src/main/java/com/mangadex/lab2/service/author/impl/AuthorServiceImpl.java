@@ -36,7 +36,7 @@ public class AuthorServiceImpl implements AuthorService {
             log.info(logMessage);
             return author;
         }
-        author = authorRepository.findById(id).orElse(null);
+        author = authorRepository.findAuthorById(id);
         cache.put(key, author);
         log.info("information is obtained from database");
         return author;

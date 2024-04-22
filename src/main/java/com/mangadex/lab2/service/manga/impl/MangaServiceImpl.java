@@ -53,7 +53,7 @@ public class MangaServiceImpl implements MangaService {
 
     @Override
     public Manga findByName(String titleName) {
-        String key = "MANGA NAME" + titleName;
+        String key = "MANGA NAME " + titleName;
         Manga manga = (Manga) cache.get(key);
         if (manga != null) {
             String logMessage = CACHE_INFO_GET + key;

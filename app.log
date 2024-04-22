@@ -4174,3 +4174,102 @@ Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method m
 2024-04-22 23:33:53.148 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data updated for key AUTHOR ID ID
 2024-04-22 23:33:53.148 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been updated
 2024-04-22 23:33:53.148 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-22 23:37:48.302 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 16096 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-22 23:37:48.305 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-22 23:37:48.978 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-22 23:37:49.149 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 163 ms. Found 3 JPA repository interfaces.
+2024-04-22 23:37:49.818 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-22 23:37:49.827 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-22 23:37:49.829 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-22 23:37:49.829 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-22 23:37:49.894 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-22 23:37:49.895 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1551 ms
+2024-04-22 23:37:50.059 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-22 23:37:50.118 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-22 23:37:50.151 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-22 23:37:50.377 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-22 23:37:50.404 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-22 23:37:50.538 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bc52a41
+2024-04-22 23:37:50.539 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-22 23:37:50.870 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-22 23:37:51.770 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-22 23:37:52.016 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-22 23:37:52.596 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-22 23:37:52.856 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-22 23:37:53.662 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-22 23:37:53.681 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-22 23:37:53.691 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.772 seconds (process running for 6.659)
+2024-04-22 23:38:00.942 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-22 23:38:00.943 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-22 23:38:00.943 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-22 23:38:01.716 [http-nio-8080-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 331 ms
+2024-04-22 23:38:12.920 [http-nio-8080-exec-9] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-04-22 23:38:12.920 [http-nio-8080-exec-9] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-22 23:38:17.223 [http-nio-8080-exec-10] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-04-22 23:38:17.224 [http-nio-8080-exec-10] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-22 23:38:55.781 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-22 23:38:55.783 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-22 23:38:55.784 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-22 23:38:59.476 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 15728 (C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2\target\classes started by zheka in C:\Users\zheka\Desktop\ZXC\БГУИР\Второй курс\java\lab2)
+2024-04-22 23:38:59.480 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-22 23:39:00.107 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-22 23:39:00.266 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 3 JPA repository interfaces.
+2024-04-22 23:39:00.860 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-22 23:39:00.870 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-22 23:39:00.871 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-22 23:39:00.871 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-22 23:39:00.943 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-22 23:39:00.943 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1429 ms
+2024-04-22 23:39:01.103 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-22 23:39:01.160 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-22 23:39:01.198 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-22 23:39:01.422 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-22 23:39:01.448 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-22 23:39:01.565 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e8986b6
+2024-04-22 23:39:01.566 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-22 23:39:01.894 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-22 23:39:02.809 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-22 23:39:03.048 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-22 23:39:03.623 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-22 23:39:03.887 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-22 23:39:04.725 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-22 23:39:04.744 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-22 23:39:04.754 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.64 seconds (process running for 6.418)
+2024-04-22 23:40:16.189 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID ID
+2024-04-22 23:40:16.193 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-22 23:40:16.195 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-22 23:40:16.228 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-22 23:40:16.233 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-22 23:40:16.238 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information is obtained from database
+2024-04-22 23:40:16.242 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - new information is added to database
+2024-04-22 23:40:16.246 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-22 23:40:16.251 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data taken for key AUTHOR ID ID
+2024-04-22 23:40:16.255 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data updated for key AUTHOR ID ID
+2024-04-22 23:40:16.255 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been updated
+2024-04-22 23:40:16.255 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-22 23:40:16.357 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID ID
+2024-04-22 23:40:16.357 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-22 23:40:16.357 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-22 23:40:16.362 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-22 23:40:16.367 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-22 23:40:16.371 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-04-22 23:40:16.374 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-04-22 23:40:16.377 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-22 23:40:16.380 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data taken for key GENRE ID ID
+2024-04-22 23:40:16.383 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data updated for key GENRE ID ID
+2024-04-22 23:40:16.384 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been updated
+2024-04-22 23:40:16.384 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-22 23:40:16.462 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data removed for key MANGA ID ID
+2024-04-22 23:40:16.462 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been deleted
+2024-04-22 23:40:16.462 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-22 23:40:16.466 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA NAME manga name test
+2024-04-22 23:40:16.469 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-22 23:40:16.472 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-22 23:40:16.476 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-22 23:40:16.479 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-22 23:40:16.482 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data updated for key MANGA ID ID
+2024-04-22 23:40:16.483 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been updated
+2024-04-22 23:40:16.483 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-22 23:40:16.486 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-22 23:40:16.490 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID ID
+2024-04-22 23:40:16.493 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database

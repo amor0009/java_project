@@ -1,16 +1,20 @@
 package com.mangadex.lab2.service.manga;
 
+import com.mangadex.lab2.cache.Cache;
 import com.mangadex.lab2.model.Author;
 import com.mangadex.lab2.model.Manga;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
 class MangaDexAPIServiceTest {
 
+    @Mock
+    private Cache cache;
     @InjectMocks
     private MangaDexAPIService mangaDexAPIService;
 

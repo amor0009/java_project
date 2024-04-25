@@ -5158,3 +5158,202 @@ Caused by: java.lang.IllegalStateException: Ambiguous @ExceptionHandler method m
 2024-04-25 22:34:52.237 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
 2024-04-25 22:34:52.240 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
 2024-04-25 22:34:52.241 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:45:36.475 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID ID
+2024-04-25 22:45:36.480 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-25 22:45:36.482 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 22:45:36.507 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 22:45:36.511 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-25 22:45:36.515 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information is obtained from database
+2024-04-25 22:45:36.519 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - new information is added to database
+2024-04-25 22:45:36.522 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 22:45:36.526 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data taken for key AUTHOR ID ID
+2024-04-25 22:45:36.530 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data updated for key AUTHOR ID ID
+2024-04-25 22:45:36.530 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been updated
+2024-04-25 22:45:36.530 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 22:45:39.630 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:45:39.760 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:45:39.765 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:45:39.768 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:45:39.942 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID ID
+2024-04-25 22:45:39.942 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-25 22:45:39.942 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 22:45:39.945 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 22:45:39.948 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-25 22:45:39.951 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-04-25 22:45:39.954 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-04-25 22:45:39.957 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 22:45:39.960 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data taken for key GENRE ID ID
+2024-04-25 22:45:39.963 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data updated for key GENRE ID ID
+2024-04-25 22:45:39.963 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been updated
+2024-04-25 22:45:39.963 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 22:45:40.028 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data removed for key MANGA ID ID
+2024-04-25 22:45:40.028 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been deleted
+2024-04-25 22:45:40.029 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 22:45:40.031 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA NAME manga name test
+2024-04-25 22:45:40.034 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 22:45:40.036 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-25 22:45:40.039 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 22:45:40.041 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-25 22:45:40.044 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data updated for key MANGA ID ID
+2024-04-25 22:45:40.045 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been updated
+2024-04-25 22:45:40.045 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 22:45:40.048 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 22:45:40.051 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID ID
+2024-04-25 22:45:40.054 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 22:59:26.696 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID ID
+2024-04-25 22:59:26.701 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-25 22:59:26.702 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 22:59:26.734 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 22:59:26.739 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-25 22:59:26.745 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information is obtained from database
+2024-04-25 22:59:26.749 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - new information is added to database
+2024-04-25 22:59:26.753 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 22:59:26.757 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data taken for key AUTHOR ID ID
+2024-04-25 22:59:26.761 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data updated for key AUTHOR ID ID
+2024-04-25 22:59:26.762 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been updated
+2024-04-25 22:59:26.762 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 22:59:26.879 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID ID
+2024-04-25 22:59:26.880 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-25 22:59:26.880 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 22:59:26.886 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 22:59:26.890 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-25 22:59:26.894 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-04-25 22:59:26.898 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-04-25 22:59:26.902 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 22:59:26.905 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data taken for key GENRE ID ID
+2024-04-25 22:59:26.908 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data updated for key GENRE ID ID
+2024-04-25 22:59:26.908 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been updated
+2024-04-25 22:59:26.908 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 22:59:26.996 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data removed for key MANGA ID ID
+2024-04-25 22:59:26.996 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been deleted
+2024-04-25 22:59:26.996 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 22:59:27.003 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA NAME manga name test
+2024-04-25 22:59:27.007 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 22:59:27.010 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-25 22:59:27.013 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 22:59:27.016 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-25 22:59:27.022 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data updated for key MANGA ID ID
+2024-04-25 22:59:27.022 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been updated
+2024-04-25 22:59:27.022 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 22:59:27.025 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 22:59:27.027 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID ID
+2024-04-25 22:59:27.029 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 22:59:29.316 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:29.439 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:29.443 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:29.444 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:42.891 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID ID
+2024-04-25 22:59:42.898 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-25 22:59:42.900 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 22:59:42.933 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 22:59:42.938 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-25 22:59:42.943 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information is obtained from database
+2024-04-25 22:59:42.947 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - new information is added to database
+2024-04-25 22:59:42.951 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 22:59:42.956 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data taken for key AUTHOR ID ID
+2024-04-25 22:59:42.961 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data updated for key AUTHOR ID ID
+2024-04-25 22:59:42.961 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been updated
+2024-04-25 22:59:42.961 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 22:59:46.011 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:46.151 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:46.156 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:46.159 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 22:59:46.336 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID ID
+2024-04-25 22:59:46.337 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-25 22:59:46.337 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 22:59:46.340 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 22:59:46.344 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-25 22:59:46.347 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-04-25 22:59:46.350 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-04-25 22:59:46.353 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 22:59:46.357 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data taken for key GENRE ID ID
+2024-04-25 22:59:46.360 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data updated for key GENRE ID ID
+2024-04-25 22:59:46.360 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been updated
+2024-04-25 22:59:46.360 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 22:59:46.438 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data removed for key MANGA ID ID
+2024-04-25 22:59:46.438 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been deleted
+2024-04-25 22:59:46.438 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 22:59:46.444 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA NAME manga name test
+2024-04-25 22:59:46.447 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 22:59:46.451 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-25 22:59:46.455 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 22:59:46.458 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-25 22:59:46.463 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data updated for key MANGA ID ID
+2024-04-25 22:59:46.463 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been updated
+2024-04-25 22:59:46.464 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 22:59:46.466 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 22:59:46.469 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID ID
+2024-04-25 22:59:46.472 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 23:00:39.093 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data removed for key AUTHOR ID ID
+2024-04-25 23:00:39.098 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been deleted
+2024-04-25 23:00:39.099 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 23:00:39.117 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 23:00:39.123 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - all information is obtained from database by author
+2024-04-25 23:00:39.128 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information is obtained from database
+2024-04-25 23:00:39.131 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - new information is added to database
+2024-04-25 23:00:39.135 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been deleted
+2024-04-25 23:00:39.140 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data taken for key AUTHOR ID ID
+2024-04-25 23:00:39.146 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - Cached data updated for key AUTHOR ID ID
+2024-04-25 23:00:39.146 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the cache has been updated
+2024-04-25 23:00:39.146 [main] INFO  c.m.l.s.a.impl.AuthorServiceImpl - information in the database has been updated
+2024-04-25 23:00:40.625 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 23:00:40.734 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 23:00:40.737 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 23:00:40.739 [main] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-04-25 23:00:40.877 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID ID
+2024-04-25 23:00:40.877 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-04-25 23:00:40.877 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 23:00:40.880 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 23:00:40.884 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - all information is obtained from database
+2024-04-25 23:00:40.888 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-04-25 23:00:40.892 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-04-25 23:00:40.895 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-04-25 23:00:40.898 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 23:00:40.899 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data taken for key GENRE ID ID
+2024-04-25 23:00:40.901 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 23:00:40.902 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data updated for key GENRE ID ID
+2024-04-25 23:00:40.902 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been updated
+2024-04-25 23:00:40.902 [main] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been updated
+2024-04-25 23:00:40.903 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 23:00:40.966 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data removed for key MANGA ID ID
+2024-04-25 23:00:40.966 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been deleted
+2024-04-25 23:00:40.966 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 23:00:40.972 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA NAME manga name test
+2024-04-25 23:00:40.974 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 23:00:40.976 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by author
+2024-04-25 23:00:40.979 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 23:00:40.981 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-04-25 23:00:40.986 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data updated for key MANGA ID ID
+2024-04-25 23:00:40.986 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the cache has been updated
+2024-04-25 23:00:40.986 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been updated
+2024-04-25 23:00:40.989 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information in the database has been deleted
+2024-04-25 23:00:40.992 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID ID
+2024-04-25 23:00:40.995 [main] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-04-25 23:00:43.126 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 12844 (D:\Studies\java\lab2\target\classes started by zheka in D:\Studies\java\lab2)
+2024-04-25 23:00:43.129 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 23:00:43.725 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 23:00:43.862 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131 ms. Found 3 JPA repository interfaces.
+2024-04-25 23:00:44.431 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 23:00:44.439 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-04-25 23:00:44.441 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 23:00:44.441 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-25 23:00:44.505 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 23:00:44.506 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1338 ms
+2024-04-25 23:00:44.664 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-25 23:00:44.718 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-25 23:00:44.749 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-04-25 23:00:44.960 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 23:00:44.984 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 23:00:45.103 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b5f7d2
+2024-04-25 23:00:45.104 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 23:00:45.434 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-04-25 23:00:46.308 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-25 23:00:46.540 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 23:00:47.093 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-25 23:00:47.360 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 23:00:48.178 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-04-25 23:00:48.198 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 23:00:48.209 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 5.431 seconds (process running for 6.492)
+2024-04-25 23:01:47.769 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 23:01:47.771 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 23:01:47.773 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

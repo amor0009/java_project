@@ -15,4 +15,6 @@ public interface MangaService {
     void deleteManga(String id);
 
     Manga updateManga(Manga manga);
+
+    List<Manga> bulkInsert(List<Manga> mangaList);
 }

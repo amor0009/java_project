@@ -126,4 +126,19 @@ class MangaServiceImplTest {
         Mockito.verify(cache, Mockito.times(1)).remove(key);
         Mockito.verify(cache, Mockito.times(1)).put(key, manga);
     }
+
+    @Test
+    void testBulkInsert_success() {
+        List<Manga> mangaList = new ArrayList<>();
+        mangaList.add(new Manga());
+        Mockito.when(mangaRepository.saveAll(mangaList)).thenReturn(mangaList);
+        Assertions.assertEquals(mangaList, mangaService.bulkInsert(mangaList));
+    }
+
+    @Test
+    void testBulkInsert_failed() {
+        List<Manga> mangaList = new ArrayList<>();
+        Mockito.when(mangaRepository.saveAll(mangaList)).thenReturn(mangaList);
+        Assertions.assertEquals(null, mangaService.bulkInsert(mangaList));
+    }
 }

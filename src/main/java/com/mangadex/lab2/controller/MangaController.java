@@ -61,4 +61,11 @@ public class MangaController {
         mangaService.deleteManga(id);
         return HttpStatus.OK;
     }
+
+    @PostMapping(value = "saveMangas")
+    public ResponseEntity<List<Manga>> saveMangas(@RequestBody String bulkParameter) {
+        List<Manga> mangaList = mangaDexAPIService.findMangasInfo(mangaDexAPIService.getMangasWithName(bulkParameter));
+        mangaService.bulkInsert(mangaList);
+        return new ResponseEntity<>(mangaList, HttpStatus.OK);
+    }
 }

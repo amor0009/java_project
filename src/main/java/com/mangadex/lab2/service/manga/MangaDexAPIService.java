@@ -163,4 +163,39 @@ public class MangaDexAPIService {
         log.info(NEW_INFO);
         return manga;
     }
+
+    public List<String> getMangasWithName(String titleName) {
+        JsonNode responseManga =  webClient.get()
+                .uri(uriBuilder -> uriBuilder
+                        .path("/manga")
+                        .queryParam(TITLE1, titleName)
+                        .build()
+                )
+                .retrieve()
+                .bodyToMono(JsonNode.class)
+                .block();
+
+        List<String> mangaId = new ArrayList<>();
+
+        if (responseManga != null) {
+            for (JsonNode manga: responseManga.findValue("data")) {
+                mangaId.add(manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1));
+            }
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+        return mangaId;
+    }
+
+    public List<Manga> findMangasInfo(List<String> mangaId) {
+        List<Manga> mangaList = new ArrayList<>();
+        for (String id : mangaId) {
+            if (cache.containsKey("MANGA ID " + id)) {
+                mangaList.add((Manga) cache.get("MANGA ID " + id));
+            } else {
+                mangaList.add(getMangaInfo(id));
+            }
+        }
+        return mangaList;
+    }
 }

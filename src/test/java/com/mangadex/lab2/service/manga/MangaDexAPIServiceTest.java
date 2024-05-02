@@ -10,6 +10,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.List;
+
 @ExtendWith(MockitoExtension.class)
 class MangaDexAPIServiceTest {
 
@@ -36,4 +38,22 @@ class MangaDexAPIServiceTest {
         Author author = mangaDexAPIService.getAuthorInfo("b6045e2c-28f4-4ce0-b4dd-b14070f2f5ae");
         Assertions.assertEquals("Oda Eiichiro", author.getName());
     }
+
+    @Test
+    void testGetMangasWithName() {
+        Manga parameter = new Manga();
+        parameter.setTitle("Naruto");
+        List<String> mangaIdList = mangaDexAPIService.getMangasWithName(parameter.getTitle());
+        Assertions.assertEquals(10, mangaIdList.size());
+    }
+
+    @Test
+    void testFindMangasInfo() {
+        Manga parameter = new Manga();
+        parameter.setTitle("Naruto");
+        List<String> mangaIdList = mangaDexAPIService.getMangasWithName(parameter.getTitle());
+        List<Manga> mangaList = mangaDexAPIService.findMangasInfo(mangaIdList);
+        Assertions.assertEquals(mangaIdList.size(), mangaList.size());
+    }
+
 }

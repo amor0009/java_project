@@ -98,6 +98,9 @@ public class MangaServiceImpl implements MangaService {
     @Transactional
     public List<Manga> bulkInsert(List<Manga> mangaList) {
         mangaList = mangaRepository.saveAll(mangaList);
+        if (mangaList.isEmpty()) {
+            return null;
+        }
         return mangaList;
     }
 }

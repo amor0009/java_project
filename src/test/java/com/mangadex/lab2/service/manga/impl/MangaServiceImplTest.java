@@ -139,6 +139,7 @@ class MangaServiceImplTest {
     void testBulkInsert_failed() {
         List<Manga> mangaList = new ArrayList<>();
         Mockito.when(mangaRepository.saveAll(mangaList)).thenReturn(mangaList);
-        Assertions.assertEquals(null, mangaService.bulkInsert(mangaList));
+        mangaList = mangaService.bulkInsert(mangaList);
+        Assertions.assertEquals(true, mangaList.isEmpty());
     }
 }

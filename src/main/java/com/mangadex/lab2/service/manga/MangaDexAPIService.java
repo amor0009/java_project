@@ -21,6 +21,7 @@ public class MangaDexAPIService {
     private static final String TITLE1 = "title";
     private static final String ATTRIBUTES1 = "attributes";
 
+    private static final String MANGA = "MANGA ID ";
     private static final String NEW_INFO = "new information is added to database";
 
     private final WebClient webClient = WebClient
@@ -121,7 +122,7 @@ public class MangaDexAPIService {
     }
 
     public Manga getMangaInfo(String mangaId) {
-        String key = "MANGA ID " + mangaId;
+        String key = MANGA + mangaId;
         if (mangaId == null) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
@@ -190,8 +191,8 @@ public class MangaDexAPIService {
     public List<Manga> findMangasInfo(List<String> mangaId) {
         List<Manga> mangaList = new ArrayList<>();
         for (String id : mangaId) {
-            if (cache.containsKey("MANGA ID " + id)) {
-                mangaList.add((Manga) cache.get("MANGA ID " + id));
+            if (cache.containsKey(MANGA + id)) {
+                mangaList.add((Manga) cache.get(MANGA + id));
             } else {
                 mangaList.add(getMangaInfo(id));
             }

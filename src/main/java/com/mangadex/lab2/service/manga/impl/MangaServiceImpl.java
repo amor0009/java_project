@@ -26,7 +26,7 @@ public class MangaServiceImpl implements MangaService {
 
     @Override
     public List<Manga> getMangas() {
-        log.info("all information is obtained from database by author");
+        log.info("all information is obtained from database by manga");
         return mangaRepository.findAll();
     }
 

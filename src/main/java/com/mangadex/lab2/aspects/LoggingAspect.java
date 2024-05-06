@@ -1,5 +1,6 @@
 package com.mangadex.lab2.aspects;
 
+import com.mangadex.lab2.service.CounterService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

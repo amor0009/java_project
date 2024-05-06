@@ -165,23 +165,25 @@ public class MangaDexAPIService {
         return manga;
     }
 
-    public List<String> getMangasWithName(String titleName) {
+    public List<String> getMangasWithName(String name) {
         JsonNode responseManga =  webClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path("/manga")
-                        .queryParam(TITLE1, titleName)
+                        .queryParam(TITLE1, name)
                         .build()
                 )
                 .retrieve()
                 .bodyToMono(JsonNode.class)
                 .block();
 
-        List<String> mangaId = new ArrayList<>();
+        List<String> mangaId;
+        List<JsonNode> mangas = new ArrayList<>();
 
         if (responseManga != null) {
             for (JsonNode manga: responseManga.findValue("data")) {
-                mangaId.add(manga.findValue("id").toPrettyString().substring(1, manga.findValue("id").toPrettyString().length() - 1));
+                mangas.add(manga);
             }
+            mangaId = mangas.stream().map(m -> m.findValue("id").toPrettyString().substring(1, m.findValue("id").toPrettyString().length() - 1)).toList();
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }

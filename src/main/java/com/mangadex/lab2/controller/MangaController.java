@@ -24,6 +24,7 @@ public class MangaController {
     public ResponseEntity<Manga> addMangaFromMangaDex(@RequestParam String titleName) {
         Manga manga = mangaService.findByName(titleName);
         if (manga != null) {
+            log.info(INCREMENT + CounterService.incrementAndGetCount());
             return new ResponseEntity<>(manga, HttpStatus.OK);
         }
         String mangaID = mangaDexAPIService.getMangaId(titleName);

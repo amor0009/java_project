@@ -16,7 +16,6 @@ import java.util.List;
 @Slf4j
 public class AuthorController {
     private AuthorService authorService;
-    private CounterService counterService;
     private static final String INCREMENT = "Incremented COUNTER to  ";
 
     @GetMapping(value = "list")

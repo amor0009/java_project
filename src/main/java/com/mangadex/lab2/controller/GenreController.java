@@ -18,11 +18,11 @@ import java.util.List;
 public class GenreController {
     private GenreMangaDexService genreMangaDexService;
     private GenreService genreService;
-    private CounterService counterService;
+    private static final String INCREMENT = "Incremented COUNTER to  ";
 
     @GetMapping(value = "list")
     public List<Genre> getAllGenres() {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return genreService.getAllGenres();
     }
 
@@ -33,13 +33,13 @@ public class GenreController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
         genreService.saveAllGenres(genres);
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(genres, HttpStatus.OK);
     }
 
     @GetMapping(value = "find/{genreId}")
     public ResponseEntity<Genre> getGenreById(@PathVariable String genreId) {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return ResponseEntity.ok(genreService.findGenreById(genreId));
     }
 
@@ -48,20 +48,20 @@ public class GenreController {
         if (genre == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(genreService.saveGenre(genre), HttpStatus.OK);
     }
 
     @PutMapping(value = "update")
     public ResponseEntity<Genre> updateGenre(@RequestBody Genre genre) {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(genreService.updateGenre(genre), HttpStatus.OK);
     }
 
     @DeleteMapping(value = "delete/{genreId}")
     public HttpStatus deleteGenre(@PathVariable String genreId) {
         genreService.deleteGenre(genreId);
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return HttpStatus.OK;
     }
 }

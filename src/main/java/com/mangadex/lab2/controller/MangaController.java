@@ -18,7 +18,7 @@ import java.util.List;
 public class MangaController {
     private MangaService mangaService;
     private MangaDexAPIService mangaDexAPIService;
-    private CounterService counterService;
+    private static final String INCREMENT = "Incremented COUNTER to  ";
 
     @GetMapping(value = "manga_dex")
     public ResponseEntity<Manga> addMangaFromMangaDex(@RequestParam String titleName) {
@@ -29,25 +29,25 @@ public class MangaController {
         String mangaID = mangaDexAPIService.getMangaId(titleName);
         manga =  mangaDexAPIService.getMangaInfo(mangaID);
         mangaService.saveManga(manga);
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(manga, HttpStatus.OK);
     }
 
     @GetMapping("list")
     public List<Manga> getMangas() {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return mangaService.getMangas();
     }
 
     @GetMapping("find_by_id/{id}")
     public ResponseEntity<Manga> getMangaByID(@PathVariable String id) {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return ResponseEntity.ok(mangaService.findByID(id));
     }
 
     @GetMapping("find_by_name")
     public ResponseEntity<Manga> getMangaByName(@RequestParam String titleName) {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return ResponseEntity.ok(mangaService.findByName(titleName));
     }
 
@@ -56,20 +56,20 @@ public class MangaController {
         if (manga == null) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
         }
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(mangaService.saveManga(manga), HttpStatus.OK);
     }
 
     @PutMapping("update")
     public ResponseEntity<Manga> updateManga(@RequestBody Manga manga) {
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(mangaService.updateManga(manga), HttpStatus.OK);
     }
 
     @DeleteMapping("delete/{id}")
     public HttpStatus deleteManga(@PathVariable String id) {
         mangaService.deleteManga(id);
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return HttpStatus.OK;
     }
 
@@ -77,7 +77,7 @@ public class MangaController {
     public ResponseEntity<List<Manga>> saveMangas(@RequestParam String bulkParameter) {
         List<Manga> mangaList = mangaDexAPIService.findMangasInfo(mangaDexAPIService.getMangasWithName(bulkParameter));
         mangaService.bulkInsert(mangaList);
-        log.info("Incremented COUNTER to " + String.valueOf(counterService.incrementAndGetCount()));
+        log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(mangaList, HttpStatus.OK);
     }
 }

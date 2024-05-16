@@ -25,8 +25,10 @@ public class ExceptionsHandler {
     }
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ExceptionHandler({HttpClientErrorException.class, HttpMessageNotReadableException.class,
-            MethodArgumentNotValidException.class, MissingServletRequestParameterException.class,
+    @ExceptionHandler({HttpClientErrorException.class,
+            HttpMessageNotReadableException.class,
+            MethodArgumentNotValidException.class,
+            MissingServletRequestParameterException.class,
             ConstraintViolationException.class})
     public ErrorResponse handleIllegalArgumentException() {
         log.error("error 400");

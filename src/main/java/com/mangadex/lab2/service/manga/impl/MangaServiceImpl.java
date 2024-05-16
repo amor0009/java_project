@@ -90,6 +90,17 @@ public class MangaServiceImpl implements MangaService {
            log.info(logMessage);
            log.info("information in the cache has been updated");
        }
+       log.info(manga.getTitle());
+        log.info(manga.getId());
+        log.info(manga.getType());
+        log.info(manga.getStatus());
+        log.info(String.valueOf(manga.getYear()));
+        log.info(manga.getAuthor().getId());
+        log.info(manga.getAuthor().getName());
+        log.info(manga.getAuthor().getType());
+        log.info(manga.getGenres().get(0).getType());
+        log.info(manga.getGenres().get(0).getName());
+        log.info(manga.getGenres().get(0).getId());
        log.info("information in the database has been updated");
        return mangaRepository.save(manga);
     }

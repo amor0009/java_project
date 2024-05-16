@@ -39,9 +39,13 @@ public class GenreMangaDexService {
             genre.setId(element.findValue("id").toPrettyString()
                     .substring(1, element.findValue("id").toPrettyString().length() - 1));
             genre.setType(element.findValue("group").toPrettyString()
-                    .substring(1, element.findValue("group").toPrettyString().length() - 1));
-            genre.setName(element.findValue("attributes").findValue("name").findValue("en").toPrettyString()
-                    .substring(1, element.findValue("attributes").findValue("name").findValue("en").toPrettyString().length() - 1));
+                    .substring(1, element.findValue("group")
+                            .toPrettyString().length() - 1));
+            genre.setName(element.findValue("attributes")
+                    .findValue("name").findValue("en").toPrettyString()
+                    .substring(1, element.findValue("attributes")
+                            .findValue("name").findValue("en")
+                            .toPrettyString().length() - 1));
             genreList.add(genre);
             String key = "GENRE ID " + genre.getId();
             cache.put(key, genre);

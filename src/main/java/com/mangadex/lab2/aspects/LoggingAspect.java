@@ -39,6 +39,7 @@ public class LoggingAspect {
         String methodName = joinPoint.getSignature().getName();
         String className = joinPoint.getTarget().getClass().getName();
         Object[] args = joinPoint.getArgs();
-        logger.info("Service method invoked - Class: {}, Method: {}, Args: {}", className, methodName, args);
+        logger.info("Service method invoked - Class: {}, Method: {}, Args: {}",
+                className, methodName, args);
     }
 }

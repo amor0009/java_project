@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/manga")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000")
 @Slf4j
 public class MangaController {
     private MangaService mangaService;
@@ -76,7 +77,8 @@ public class MangaController {
 
     @PostMapping(value = "saveMangas")
     public ResponseEntity<List<Manga>> saveMangas(@RequestParam String bulkParameter) {
-        List<Manga> mangaList = mangaDexAPIService.findMangasInfo(mangaDexAPIService.getMangasWithName(bulkParameter));
+        List<Manga> mangaList = mangaDexAPIService.findMangasInfo(mangaDexAPIService
+                .getMangasWithName(bulkParameter));
         mangaService.bulkInsert(mangaList);
         log.info(INCREMENT + CounterService.incrementAndGetCount());
         return new ResponseEntity<>(mangaList, HttpStatus.OK);

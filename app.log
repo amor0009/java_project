@@ -1707,3 +1707,122 @@ reactor.netty.http.client.PrematureCloseException: Connection prematurely closed
 2024-05-22 22:05:26.966 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-22 22:05:26.968 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-05-22 22:05:26.970 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-05-22 22:05:31.999 [main] INFO  com.mangadex.lab2.Lab2Application - Starting Lab2Application using Java 17.0.9 with PID 9520 (D:\Studies\java\lab2\target\classes started by zheka in D:\Studies\java\lab2)
+2024-05-22 22:05:32.004 [main] INFO  com.mangadex.lab2.Lab2Application - No active profile set, falling back to 1 default profile: "default"
+2024-05-22 22:05:32.635 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-22 22:05:32.795 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 3 JPA repository interfaces.
+2024-05-22 22:05:33.601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-05-22 22:05:33.615 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-22 22:05:33.618 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-05-22 22:05:33.618 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-05-22 22:05:33.724 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-05-22 22:05:33.726 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1682 ms
+2024-05-22 22:05:33.981 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-22 22:05:34.087 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-22 22:05:34.144 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-22 22:05:34.423 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-22 22:05:34.454 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-05-22 22:05:34.575 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a1a0bc
+2024-05-22 22:05:34.577 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-05-22 22:05:34.860 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-05-22 22:05:35.786 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-22 22:05:36.058 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-22 22:05:36.637 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-22 22:05:36.898 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-22 22:05:37.702 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-05-22 22:05:37.720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-05-22 22:05:37.730 [main] INFO  com.mangadex.lab2.Lab2Application - Started Lab2Application in 6.087 seconds (process running for 6.903)
+2024-05-22 22:05:37.867 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-22 22:05:37.867 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-05-22 22:05:37.868 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-05-22 22:05:37.895 [http-nio-8080-exec-1] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  1
+2024-05-22 22:05:37.898 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:37.898 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:38.026 [http-nio-8080-exec-2] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  2
+2024-05-22 22:05:38.026 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:38.026 [http-nio-8080-exec-2] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:40.711 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: findByName, Args: [Naruto]
+2024-05-22 22:05:40.711 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:40.750 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:40.750 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-05-22 22:05:40.751 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.MangaDexAPIService, Method: getMangaId, Args: [Naruto]
+2024-05-22 22:05:41.452 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.MangaDexAPIService, Method: getMangaInfo, Args: [6b1eb93e-473a-4ab3-9922-1a66d2a29a4a]
+2024-05-22 22:05:41.540 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.540 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-05-22 22:05:41.540 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.541 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.541 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.541 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.541 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.541 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.542 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.542 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-05-22 22:05:41.542 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:41.542 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.MangaDexAPIService - new information is added to database
+2024-05-22 22:05:41.542 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: saveManga, Args: [com.mangadex.lab2.model.Manga@2cd7be3c]
+2024-05-22 22:05:41.542 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-05-22 22:05:41.617 [http-nio-8080-exec-3] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  3
+2024-05-22 22:05:41.649 [http-nio-8080-exec-4] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  4
+2024-05-22 22:05:41.650 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:41.650 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:43.773 [http-nio-8080-exec-5] INFO  c.m.lab2.controller.GenreController - Incremented COUNTER to  5
+2024-05-22 22:05:43.773 [http-nio-8080-exec-5] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.genre.impl.GenreServiceImpl, Method: saveGenre, Args: [com.mangadex.lab2.model.Genre@127c5631]
+2024-05-22 22:05:43.773 [http-nio-8080-exec-5] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-05-22 22:05:43.785 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: findByID, Args: [6b1eb93e-473a-4ab3-9922-1a66d2a29a4a]
+2024-05-22 22:05:43.785 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:43.785 [http-nio-8080-exec-6] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
+2024-05-22 22:05:43.785 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.genre.impl.GenreServiceImpl, Method: findGenreById, Args: [1716404743751]
+2024-05-22 22:05:43.786 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:43.796 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:43.797 [http-nio-8080-exec-6] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-05-22 22:05:43.797 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: saveManga, Args: [com.mangadex.lab2.model.Manga@2cd7be3c]
+2024-05-22 22:05:43.797 [http-nio-8080-exec-6] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-05-22 22:05:43.820 [http-nio-8080-exec-7] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  6
+2024-05-22 22:05:43.821 [http-nio-8080-exec-7] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: findByName, Args: []
+2024-05-22 22:05:43.821 [http-nio-8080-exec-7] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:43.822 [http-nio-8080-exec-7] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:43.822 [http-nio-8080-exec-7] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-05-22 22:05:46.904 [http-nio-8080-exec-10] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  7
+2024-05-22 22:05:46.904 [http-nio-8080-exec-10] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:46.904 [http-nio-8080-exec-10] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:46.913 [http-nio-8080-exec-9] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  8
+2024-05-22 22:05:46.913 [http-nio-8080-exec-9] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:46.913 [http-nio-8080-exec-9] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:49.445 [http-nio-8080-exec-8] INFO  c.m.lab2.controller.GenreController - Incremented COUNTER to  9
+2024-05-22 22:05:49.445 [http-nio-8080-exec-8] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.genre.impl.GenreServiceImpl, Method: saveGenre, Args: [com.mangadex.lab2.model.Genre@792d0fa8]
+2024-05-22 22:05:49.445 [http-nio-8080-exec-8] INFO  c.m.l.s.genre.impl.GenreServiceImpl - new information is added to database
+2024-05-22 22:05:49.452 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: findByID, Args: [6b1eb93e-473a-4ab3-9922-1a66d2a29a4a]
+2024-05-22 22:05:49.452 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:49.452 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - Cached data taken for key MANGA ID 6b1eb93e-473a-4ab3-9922-1a66d2a29a4a
+2024-05-22 22:05:49.452 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.genre.impl.GenreServiceImpl, Method: findGenreById, Args: [1716404749442]
+2024-05-22 22:05:49.452 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:49.454 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:49.454 [http-nio-8080-exec-1] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information is obtained from database
+2024-05-22 22:05:49.454 [http-nio-8080-exec-1] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: saveManga, Args: [com.mangadex.lab2.model.Manga@2cd7be3c]
+2024-05-22 22:05:49.454 [http-nio-8080-exec-1] INFO  c.m.l.s.manga.impl.MangaServiceImpl - new information is added to database
+2024-05-22 22:05:49.469 [http-nio-8080-exec-2] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  10
+2024-05-22 22:05:49.469 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: findByName, Args: []
+2024-05-22 22:05:49.469 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache get method invoked: get
+2024-05-22 22:05:49.471 [http-nio-8080-exec-2] INFO  c.m.lab2.aspects.LoggingAspect - Cache put method invoked: put
+2024-05-22 22:05:49.471 [http-nio-8080-exec-2] INFO  c.m.l.s.manga.impl.MangaServiceImpl - information is obtained from database
+2024-05-22 22:05:50.802 [http-nio-8080-exec-3] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  11
+2024-05-22 22:05:50.802 [http-nio-8080-exec-3] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:50.803 [http-nio-8080-exec-3] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:50.811 [http-nio-8080-exec-4] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  12
+2024-05-22 22:05:50.811 [http-nio-8080-exec-4] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:50.811 [http-nio-8080-exec-4] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:52.760 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.genre.impl.GenreServiceImpl, Method: deleteGenre, Args: [1716404749442]
+2024-05-22 22:05:52.760 [http-nio-8080-exec-6] INFO  c.m.lab2.aspects.LoggingAspect - Cache remove method invoked: remove
+2024-05-22 22:05:52.760 [http-nio-8080-exec-6] INFO  c.m.l.s.genre.impl.GenreServiceImpl - Cached data removed for key GENRE ID 1716404749442
+2024-05-22 22:05:52.760 [http-nio-8080-exec-6] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the cache has been deleted
+2024-05-22 22:05:52.773 [http-nio-8080-exec-6] INFO  c.m.l.s.genre.impl.GenreServiceImpl - information in the database has been deleted
+2024-05-22 22:05:52.778 [http-nio-8080-exec-6] INFO  c.m.lab2.controller.GenreController - Incremented COUNTER to  13
+2024-05-22 22:05:54.522 [http-nio-8080-exec-7] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  14
+2024-05-22 22:05:54.522 [http-nio-8080-exec-7] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:54.522 [http-nio-8080-exec-7] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:05:54.528 [http-nio-8080-exec-10] INFO  c.m.lab2.controller.MangaController - Incremented COUNTER to  15
+2024-05-22 22:05:54.529 [http-nio-8080-exec-10] INFO  c.m.lab2.aspects.LoggingAspect - Service method invoked - Class: com.mangadex.lab2.service.manga.impl.MangaServiceImpl, Method: getMangas, Args: []
+2024-05-22 22:05:54.529 [http-nio-8080-exec-10] INFO  c.m.l.s.manga.impl.MangaServiceImpl - all information is obtained from database by manga
+2024-05-22 22:07:38.432 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-22 22:07:38.434 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-05-22 22:07:38.437 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

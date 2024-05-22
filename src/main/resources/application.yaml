@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/MangaDataBase
+    url: jdbc:postgresql://host.docker.internal/MangaDataBase
     username: amor0009
     password: lukas
     driver-class-name: org.postgresql.Driver

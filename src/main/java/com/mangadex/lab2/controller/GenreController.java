@@ -14,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/genre")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000")
 @Slf4j
 public class GenreController {
     private GenreMangaDexService genreMangaDexService;

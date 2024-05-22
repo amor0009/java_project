@@ -1,13 +1,11 @@
 package com.mangadex.lab2.service.manga.impl;
 
 import com.mangadex.lab2.cache.Cache;
-import com.mangadex.lab2.model.Genre;
 import com.mangadex.lab2.model.Manga;
 import com.mangadex.lab2.repository.MangaRepository;
 import com.mangadex.lab2.service.manga.MangaService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
